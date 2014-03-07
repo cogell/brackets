@@ -1,0 +1,33 @@
+{
+  "name": "march-madness",
+  "version": "0.0.0",
+  "authors": [
+    "B. Cedric Cogell <cedric.cogell@gmail.com>"
+  ],
+  "description": "creating a march madness bracket driven by google spreadsheet data",
+  "main": "index.html",
+  "keywords": [
+    "huffpost",
+    "handlebars",
+    "widget",
+    "bower",
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "code.huffingtonpost.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11",
+    "tabletop": "~1.3.3",
+    "handlebars": "~1.3.0",
+    "lodash": "~2.4.1",
+    "bourbon": "~3.1.8"
+  }
+}

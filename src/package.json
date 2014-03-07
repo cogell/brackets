@@ -1,0 +1,29 @@
+{
+  "name": "HuffPost-Widget-March-Madness",
+  "version": "0.0.1",
+  "description": "widget to embed in HuffPost Web for march madness",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html5",
+    "node",
+    "gulp"
+  ],
+  "author": "B. Cedric Cogell",
+  "devDependencies": {
+    "bower": "~1.2.8",
+    "gulp": "~3.5.0",
+    "connect": "~2.12.0",
+    "gulp-concat": "~2.1.7",
+    "gulp-uglify": "~0.2.0",
+    "gulp-sass": "~0.7.0",
+    "gulp-util": "~2.2.14",
+    "gulp-livereload": "~1.1.1",
+    "tiny-lr": "0.0.5",
+    "gulp-handlebars": "~1.0.2",
+    "gulp-declare": "~0.1.0",
+    "gulp-clean": "~0.2.4"
+  }
+}

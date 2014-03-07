@@ -1,0 +1,16 @@
+{
+	"strict": false,
+	"globals":{
+		"$": false,
+		"_": false,
+		"Handlebars": false,
+		"Tabletop": false,
+
+		"console": false,
+
+
+		"exports": false,
+		"require": false,
+		"module": false
+	}
+}
