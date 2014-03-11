@@ -13,6 +13,7 @@
 		"require": false,
 		"module": false,
 
-		"artboard": false
+		"requirejs": false,
+		"define": false
 	}
 }

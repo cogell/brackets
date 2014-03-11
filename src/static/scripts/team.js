@@ -1,26 +1,26 @@
-Bracket.Team = (function (Bracket) {
+define(function (require) {
+	require('kinetic');
 
-	var t = {};
+	return function Team ( params ) {
+		this.name = params.name;
+		this.seed = params.seed;
+		this.score = params.score;
 
-	function Team( name, seed, score, x, y){
+		this.text = this.seed + ' ' + this.name + ' ' + this.score;
 
-		this.name = name;
-		this.seed = seed;
-		this.score = score;
-
-		this.x = x;
-		this.y = y;
+		this.x = params.x;
+		this.y = params.y;
 
 		this.render = function () {
-			this.el = createGroup();
+			this.el = createGroup( this.x, this.y );
 			this.el.add( createRect() );
-			this.el.add( createText() );
+			this.el.add( createText( this.text ) );
 		};
 
-		function createGroup () {
+		function createGroup (x, y) {
 			return new Kinetic.Group({
-				x: this.x / 2,
-				y: this.y / 2
+				x: x,
+				y: y
 			});
 		}
 
@@ -30,25 +30,20 @@ Bracket.Team = (function (Bracket) {
 				y: 0, // relative to group
 				width: 100,
 				height: 50,
-				fill: 'blue',
-				stroke: 'grey',
-				strokeWidth: 4
+				fill: 'grey'
 			});
 		}
 
-		function createText () {
+		function createText ( text ) {
 			return new Kinetic.Text({
         x: 10, // relative to group
         y: 10, // relative to group
-        text: 'Simple Text',
+        text: text,
         fontSize: 30,
         fontFamily: 'Calibri',
         fill: 'black'
       });
 		}
+	};
 
-	}
-
-	return t;
-
-}(Bracket || {}));
+});

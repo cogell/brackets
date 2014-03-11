@@ -1,30 +1,38 @@
-/*jshint -W079 */
-var Bracket.Artboard = (function (Bracket) {
+define(function (require) {
+	require('kinetic');
 
-	var art = {};
+	return function Artboard ( canvasId, width, height ) {
 
-	function createStage(){
-		art.stage = new Kinetic.Stage({
-			container: 'container',
-			width: 480,
-			height: 320
-		});
-	}
+		// refactor data model that controls width and height into another POJO
 
-	function createLayer () {
-		art.layer = new Kinetic.Layer();
-	}
+		this.canvasId = canvasId;
+		this.width = width;
+		this.height = height;
 
-	art.main = function () {
-		createStage();
-		createLayer();
-		var team1 = new Bracket.Team( 'name', 12, 87 );
-		team1.render();
+		this.render = function render () {
+			console.log('Starting to render artboard...');
+			this.stage = this.createStage();
+			this.layer = this.createLayer();
 
-		art.layer.add( team1.el );
-		art.stage.add( art.layer );
+			this.stage.add( this.layer );
+		};
+
+		this.createStage = function createStage () {
+			return new Kinetic.Stage({
+				container: this.canvasId,
+				width: this.width,
+				height: this.height
+			});
+		};
+
+		this.createLayer = function createLayer () {
+			return new Kinetic.Layer();
+		};
+
+		this.addKineticElement = function addKineticElement (el) {
+			this.layer.add( el );
+		};
+
 	};
 
-	return art;
-
-}(Bracket || {}));
+});

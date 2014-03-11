@@ -7,22 +7,13 @@
 <body>
 
 	<div id="huffpostcode-march-madness">
-		<div id="container"></div>
+		<div id="bracket-canvas"></div>
 	</div>
 
-	<!-- ORDER IS IMPORTANT -->
-	<script type="text/javascript" src="/jquery/dist/jquery.js"></script>
-	<script type="text/javascript" src="/lodash/dist/lodash.js"></script>
-	<script type="text/javascript" src="/handlebars/handlebars.runtime.js"></script>
-	<script type="text/javascript" src="/tabletop/src/tabletop.js"></script>
-	<script type="text/javascript" src="/kineticjs/kinetic.js"></script>
+	<!-- change tag for dist -->
+	<script data-main="/scripts/main" src="/requirejs/require.js"></script>
 
-	<script class="handlebar-template" type="text/javascript" src="/scripts/templates/match.js"></script>
-
-	<script type="text/javascript" src="/scripts/team.js"></script>
-	<script type="text/javascript" src="/scripts/artboard.js"></script>
-	<script type="text/javascript" src="/scripts/main.js"></script>
-
+	<!-- development only -->
   <script src="http://localhost:35729/livereload.js"></script>
 
 </body>
