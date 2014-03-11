@@ -1,18 +1,8 @@
-// var gulp = require('gulp');
 var connect = require('connect');
 
-function runEnvTask () {
-	connectDev();
-}
-
-function connectDev () {
+exports.task = function connectDev () {
 	connect()
-		.use(connect.static('bower_components'))
-		.use(connect.static('static'))
+		.use('/bower_components', connect.static(__dirname + '/../bower_components'))
+		.use(connect.static(__dirname + '/../static'))
 		.listen(4000);
-}
-
-exports.task = function() {
-	console.log('starting simple server on localhost:4000');
-	runEnvTask();
 };

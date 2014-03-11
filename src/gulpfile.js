@@ -6,6 +6,7 @@ var server = require('./gulp_tasks/server');
 var sass = require('./gulp_tasks/sass');
 var handlebars = require('./gulp_tasks/handlebars');
 var concat = require('./gulp_tasks/concat');
+var rjs = require('./gulp_tasks/rjs');
 var uglify = require('./gulp_tasks/uglify');
 var lr = require('./gulp_tasks/lr-server');
 var copy = require('./gulp_tasks/copy');
@@ -18,6 +19,7 @@ gulp.task('sass', function () {
 });
 gulp.task('handlebars', handlebars.task);
 gulp.task('concat', concat.task);
+gulp.task('rjs', rjs.task);
 gulp.task('clean', clean.task);
 gulp.task('uglify', uglify.task);
 gulp.task('copy', copy.task);
@@ -26,7 +28,7 @@ gulp.task('lr-server', lr.start);
 
 gulp.task('build', function() {
 	gutil.env.production = true;
-	gulp.run('clean', 'copy', 'sass', 'concat');
+	gulp.run('clean', 'copy', 'sass', 'rjs');
 });
 
 gulp.task('start', function(){

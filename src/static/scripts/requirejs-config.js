@@ -1,10 +1,10 @@
 require.config({
 
   paths: {
-    jquery: '/jquery/dist/jquery',
-    lodash: '/lodash/dist/lodash',
-    tabletop: '/tabletop/src/tabletop',
-    kinetic: '/kineticjs/kinetic'
+    jquery: '../../bower_components/jquery/dist/jquery',
+    lodash: '../../bower_components/lodash/dist/lodash',
+    tabletop: '../../bower_components/tabletop/src/tabletop',
+    kinetic: '../../bower_components/kineticjs/kinetic'
   },
 
   shim: {

@@ -12,6 +12,7 @@
 		"exports": false,
 		"require": false,
 		"module": false,
+		"__dirname": false,
 
 		"requirejs": false,
 		"define": false
