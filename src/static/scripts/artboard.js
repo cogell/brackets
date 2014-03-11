@@ -31,6 +31,7 @@ define(function (require) {
 
 		this.addKineticElement = function addKineticElement (el) {
 			this.layer.add( el );
+			this.layer.draw();
 		};
 
 	};

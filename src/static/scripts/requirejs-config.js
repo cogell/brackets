@@ -14,6 +14,9 @@ require.config({
     lodash: {
       exports: '_'
     },
+    tabletop: {
+      exports: 'Tabletop'
+    },
     kinetic: {
       exports: 'Kinetic'
     }

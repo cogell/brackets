@@ -10,11 +10,15 @@ define(function (require) {
 
 		this.x = params.x;
 		this.y = params.y;
+		this.width = params.width;
 
 		this.render = function () {
 			this.el = createGroup( this.x, this.y );
-			this.el.add( createRect() );
-			this.el.add( createText( this.text ) );
+			this.el.rect = createRect( this.width );
+			this.el.text = createText( this.text );
+			console.log('this.el.text.getTextWidth()', this.el.text.getTextWidth());
+			this.el.add( this.el.rect );
+			this.el.add( this.el.text );
 		};
 
 		function createGroup (x, y) {
@@ -24,13 +28,16 @@ define(function (require) {
 			});
 		}
 
-		function createRect () {
+		function createRect ( width ) {
 			return new Kinetic.Rect({
 				x: 0, // relative to group
 				y: 0, // relative to group
-				width: 100,
+				width: width,
 				height: 50,
 				fill: 'grey'
+			})
+			.on('mouseover', function () {
+				// console.log('mouseover fire on rect');
 			});
 		}
 
