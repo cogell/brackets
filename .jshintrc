@@ -5,12 +5,14 @@
 		"_": false,
 		"Handlebars": false,
 		"Tabletop": false,
+		"Kinetic": false,
 
 		"console": false,
 
-
 		"exports": false,
 		"require": false,
-		"module": false
+		"module": false,
+
+		"artboard": false
 	}
 }
