@@ -1,0 +1,15 @@
+.popup {
+	.title {
+		font-family: $slab;
+		text-transform: uppercase;
+		margin: 0; // clear default
+		font-size: 1.5em;
+	}
+	.text{
+		margin: 0; // clear default
+		font-size: 1.2em;
+	}
+}
+
+.recap {}
+.notable {}

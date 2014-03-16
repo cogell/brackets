@@ -1,0 +1,7 @@
+$slab: 'Roboto Slab', sans-serif;
+
+& {
+	font-family: 'Roboto', sans-serif;
+	font-size: 62.5%; // standard css voodoo to make em's map to normal px values (google it)
+	color: $black;
+}

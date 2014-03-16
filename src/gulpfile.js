@@ -3,6 +3,7 @@ var gutil = require('gulp-util');
 var livereload = require('gulp-livereload');
 
 var server = require('./gulp_tasks/server');
+var rename = require('./gulp_tasks/rename');
 var sass = require('./gulp_tasks/sass');
 var handlebars = require('./gulp_tasks/handlebars');
 var concat = require('./gulp_tasks/concat');
@@ -14,6 +15,7 @@ var clean = require('./gulp_tasks/clean');
 
 
 gulp.task('server', server.task);
+gulp.task('rename', rename.task);
 gulp.task('sass', function () {
 	sass.task().pipe( livereload(lr.server) );
 });
@@ -28,11 +30,11 @@ gulp.task('lr-server', lr.start);
 
 gulp.task('build', function() {
 	gutil.env.production = true;
-	gulp.run('clean', 'copy', 'sass', 'rjs');
+	gulp.run('clean', 'rename', 'copy', 'sass', 'rjs');
 });
 
 gulp.task('start', function(){
-	gulp.run('server', 'lr-server', 'sass', 'handlebars');
+	gulp.run('rename', 'server', 'lr-server', 'sass', 'handlebars');
 
 	gulp.watch(sass.glob, function () {
 		gulp.run('sass');

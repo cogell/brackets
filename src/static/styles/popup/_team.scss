@@ -1,0 +1,66 @@
+.popup .header {
+	overflow: auto;
+	margin-bottom: $popup-padding;
+}
+
+.popup .team1,
+.popup .team2{
+	width: 50%;
+	float: left;
+	clear: right; // clear the close button
+
+	border-bottom: $common-border;
+
+	// used to vertically align .name and .seed el's
+	.topLock{
+		height: 3em;
+		position: relative; // for the kids
+	}
+
+	.name,
+	.seed {
+		color: $grey;
+		// using a vertical centering effect from here:
+		// http://coding.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/
+	  position: absolute;
+	  top: 50%;
+    @include transform(translate(0,-50%));
+	}
+	.seed {
+		font-size: 1.5em;
+	}
+	.name {
+		margin: 0;
+		font-size: 2em;
+		padding: 0.2em;
+
+		text-transform: uppercase;
+	}
+	.score {
+		clear: both;
+		margin: 0; // remove default
+
+		font-family: $slab;
+		font-size: 3.5em;
+		padding: 0.1em 0.2em;
+
+		border-top: $common-border;
+	}
+}
+
+.popup .team1 {
+	border-right: $common-border;
+	.seed { left: 0; }
+	.name { right: 0; }
+	.score{
+		text-align: right;
+		border-left: $common-border;
+	}
+}
+
+.popup .team2 {
+	border-left: $common-border;
+	.seed { right: 0; }
+	.name {}
+	.score{ border-right: $common-border }
+}

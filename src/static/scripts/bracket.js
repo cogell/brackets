@@ -9,32 +9,37 @@ define(function (require) {
 
 	var Bracket = window.Bracket = {};
 
-	Bracket.matches = [];
-
 	Bracket.init = function init () {
 		console.log('Bracket App Starting Up...');
 
 		Bracket.artboard = new Artboard( 'bracket-canvas', 320, 480 );
 		Bracket.artboard.render();
 
-
 		Bracket.fetchData();
 
-
-
-		// artboard.addKineticElement( match.el );
-		// artboard.layer.draw();
 	};
 
 	Bracket.fetchData = function fetchData () {
-		Tabletop.init({
+		Bracket.tabletop = Tabletop.init({
 			key: '0AoFVfb01eGFHdEhXR0MwTFdtWXI5WGE3UUMyZFI0Y0E',
 			callback: Bracket.dataHandler,
 			simpleSheet: true
 		});
 	};
 
-	Bracket.dataHandler = function dataHandler (data) {
+	Bracket.dataHandler = function dataHandler () {
+
+		// create an array of matches for each sheet in the spreadsheet
+		// the arrays are attached to Bracket by their spreadsheet names ex. Bracket['round 2']
+		_.each(Bracket.tabletop.sheets(), function ( model ) {
+			console.log('model', model);
+			Bracket[model.name.toString()] = Bracket.createMatchesArray( model.elements );
+		});
+
+	};
+
+	Bracket.createMatchesArray = function createMatchesArray ( data ) {
+		var toReturn = [];
 
 		_.each(data, function( matchData ){
 
@@ -57,9 +62,8 @@ define(function (require) {
 				width: 200
 			});
 
-			console.log('team1', team1);
-
 			var match = new Match({
+				region: matchData.region,
 				team1: team1,
 				team2: team2,
 				x: 0,
@@ -67,10 +71,10 @@ define(function (require) {
 				matchPopupText: matchData['match-popup-text']
 			});
 
-			match.render();
-
-			Bracket.matches.push( match );
+			toReturn.push( match );
 		});
+
+		return toReturn;
 	};
 
 	return Bracket;

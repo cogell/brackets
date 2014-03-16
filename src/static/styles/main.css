@@ -1,5 +1,418 @@
+body {
+  margin: 0; }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('/fonts/icomoon.eot?smw1ar');
+  src: url('/fonts/icomoon.eot?#iefixsmw1ar') format('embedded-opentype'), url('/fonts/icomoon.woff?smw1ar') format('woff'), url('/fonts/icomoon.ttf?smw1ar') format('truetype'), url('/fonts/icomoon.svg?smw1ar#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-stop:before {
+  content: "\e600"; }
+
+.icon-close:before {
+  content: "\e601"; }
+
 #huffpostcode-march-madness {
-  /* apply a natural box layout model to all elements */ }
+  /* apply a natural box layout model to all elements */
+  /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+  /**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+  /**
+ * Remove default margin.
+ */
+  /* HTML5 display definitions
+   ========================================================================== */
+  /**
+ * Correct `block` display not defined in IE 8/9.
+ */
+  /**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+  /**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+  /**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+  /* Links
+   ========================================================================== */
+  /**
+ * Remove the gray background color from active links in IE 10.
+ */
+  /**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+  /* Text-level semantics
+   ========================================================================== */
+  /**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+  /**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+  /**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+  /**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+  /**
+ * Address styling not present in IE 8/9.
+ */
+  /**
+ * Address inconsistent and variable font size in all browsers.
+ */
+  /**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+  /* Embedded content
+   ========================================================================== */
+  /**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+  /**
+ * Correct overflow displayed oddly in IE 9.
+ */
+  /* Grouping content
+   ========================================================================== */
+  /**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+  /**
+ * Address differences between Firefox and other browsers.
+ */
+  /**
+ * Contain overflow in all browsers.
+ */
+  /**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+  /* Forms
+   ========================================================================== */
+  /**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+  /**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+  /**
+ * Address `overflow` set to `hidden` in IE 8/9/10.
+ */
+  /**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8+, and Opera
+ * Correct `select` style inheritance in Firefox.
+ */
+  /**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+  /**
+ * Re-set default cursor for disabled elements.
+ */
+  /**
+ * Remove inner padding and border in Firefox 4+.
+ */
+  /**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+  /**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+  /**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+  /**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+  /**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+  /**
+ * Define consistent border, margin, and padding.
+ */
+  /**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+  /**
+ * Remove default vertical scrollbar in IE 8/9.
+ */
+  /**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+  /* Tables
+   ========================================================================== */
+  /**
+ * Remove most spacing between table cells.
+ */
+  background-color: pink; }
   #huffpostcode-march-madness *, #huffpostcode-march-madness *:before, #huffpostcode-march-madness *:after {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
+  #huffpostcode-march-madness html {
+    font-family: sans-serif;
+    /* 1 */
+    -ms-text-size-adjust: 100%;
+    /* 2 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */ }
+  #huffpostcode-march-madness body {
+    margin: 0; }
+  #huffpostcode-march-madness article, #huffpostcode-march-madness aside, #huffpostcode-march-madness details, #huffpostcode-march-madness figcaption, #huffpostcode-march-madness figure, #huffpostcode-march-madness footer, #huffpostcode-march-madness header, #huffpostcode-march-madness hgroup, #huffpostcode-march-madness main, #huffpostcode-march-madness nav, #huffpostcode-march-madness section, #huffpostcode-march-madness summary {
+    display: block; }
+  #huffpostcode-march-madness audio, #huffpostcode-march-madness canvas, #huffpostcode-march-madness progress, #huffpostcode-march-madness video {
+    display: inline-block;
+    /* 1 */
+    vertical-align: baseline;
+    /* 2 */ }
+  #huffpostcode-march-madness audio:not([controls]) {
+    display: none;
+    height: 0; }
+  #huffpostcode-march-madness [hidden], #huffpostcode-march-madness template {
+    display: none; }
+  #huffpostcode-march-madness a {
+    background: transparent; }
+  #huffpostcode-march-madness a:active, #huffpostcode-march-madness a:hover {
+    outline: 0; }
+  #huffpostcode-march-madness abbr[title] {
+    border-bottom: 1px dotted; }
+  #huffpostcode-march-madness b, #huffpostcode-march-madness strong {
+    font-weight: bold; }
+  #huffpostcode-march-madness dfn {
+    font-style: italic; }
+  #huffpostcode-march-madness h1 {
+    font-size: 2em;
+    margin: 0.67em 0; }
+  #huffpostcode-march-madness mark {
+    background: #ff0;
+    color: #000; }
+  #huffpostcode-march-madness small {
+    font-size: 80%; }
+  #huffpostcode-march-madness sub, #huffpostcode-march-madness sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline; }
+  #huffpostcode-march-madness sup {
+    top: -0.5em; }
+  #huffpostcode-march-madness sub {
+    bottom: -0.25em; }
+  #huffpostcode-march-madness img {
+    border: 0; }
+  #huffpostcode-march-madness svg:not(:root) {
+    overflow: hidden; }
+  #huffpostcode-march-madness figure {
+    margin: 1em 40px; }
+  #huffpostcode-march-madness hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0; }
+  #huffpostcode-march-madness pre {
+    overflow: auto; }
+  #huffpostcode-march-madness code, #huffpostcode-march-madness kbd, #huffpostcode-march-madness pre, #huffpostcode-march-madness samp {
+    font-family: monospace, monospace;
+    font-size: 1em; }
+  #huffpostcode-march-madness button, #huffpostcode-march-madness input, #huffpostcode-march-madness optgroup, #huffpostcode-march-madness select, #huffpostcode-march-madness textarea {
+    color: inherit;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+    margin: 0;
+    /* 3 */ }
+  #huffpostcode-march-madness button {
+    overflow: visible; }
+  #huffpostcode-march-madness button, #huffpostcode-march-madness select {
+    text-transform: none; }
+  #huffpostcode-march-madness button, #huffpostcode-march-madness html input[type="button"], #huffpostcode-march-madness input[type="reset"], #huffpostcode-march-madness input[type="submit"] {
+    -webkit-appearance: button;
+    /* 2 */
+    cursor: pointer;
+    /* 3 */ }
+  #huffpostcode-march-madness button[disabled], #huffpostcode-march-madness html input[disabled] {
+    cursor: default; }
+  #huffpostcode-march-madness button::-moz-focus-inner, #huffpostcode-march-madness input::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
+  #huffpostcode-march-madness input {
+    line-height: normal; }
+  #huffpostcode-march-madness input[type="checkbox"], #huffpostcode-march-madness input[type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */ }
+  #huffpostcode-march-madness input[type="number"]::-webkit-inner-spin-button, #huffpostcode-march-madness input[type="number"]::-webkit-outer-spin-button {
+    height: auto; }
+  #huffpostcode-march-madness input[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    /* 2 */
+    box-sizing: content-box; }
+  #huffpostcode-march-madness input[type="search"]::-webkit-search-cancel-button, #huffpostcode-march-madness input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+  #huffpostcode-march-madness fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em; }
+  #huffpostcode-march-madness legend {
+    border: 0;
+    /* 1 */
+    padding: 0;
+    /* 2 */ }
+  #huffpostcode-march-madness textarea {
+    overflow: auto; }
+  #huffpostcode-march-madness optgroup {
+    font-weight: bold; }
+  #huffpostcode-march-madness table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+  #huffpostcode-march-madness td, #huffpostcode-march-madness th {
+    padding: 0; }
+  #huffpostcode-march-madness {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    color: #333333; }
+  #huffpostcode-march-madness .popup {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: white;
+    padding-top: 28px; }
+  #huffpostcode-march-madness .popup .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.3em;
+    cursor: pointer; }
+    #huffpostcode-march-madness .popup .close .icon-close {
+      color: white;
+      z-index: 9;
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    #huffpostcode-march-madness .popup .close .icon-stop {
+      color: #b2b2b2;
+      font-size: 2em;
+      background-color: white; }
+  #huffpostcode-march-madness .popup .header {
+    overflow: auto;
+    margin-bottom: 10px; }
+  #huffpostcode-march-madness .popup .team1, #huffpostcode-march-madness .popup .team2 {
+    width: 50%;
+    float: left;
+    clear: right;
+    border-bottom: 1px solid #b2b2b2; }
+    #huffpostcode-march-madness .popup .team1 .topLock, #huffpostcode-march-madness .popup .team2 .topLock {
+      height: 3em;
+      position: relative; }
+    #huffpostcode-march-madness .popup .team1 .name, #huffpostcode-march-madness .popup .team1 .seed, #huffpostcode-march-madness .popup .team2 .name, #huffpostcode-march-madness .popup .team2 .seed {
+      color: #4c4c4c;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+      -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      transform: translate(0, -50%); }
+    #huffpostcode-march-madness .popup .team1 .seed, #huffpostcode-march-madness .popup .team2 .seed {
+      font-size: 1.5em; }
+    #huffpostcode-march-madness .popup .team1 .name, #huffpostcode-march-madness .popup .team2 .name {
+      margin: 0;
+      font-size: 2em;
+      padding: 0.2em;
+      text-transform: uppercase; }
+    #huffpostcode-march-madness .popup .team1 .score, #huffpostcode-march-madness .popup .team2 .score {
+      clear: both;
+      margin: 0;
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 3.5em;
+      padding: 0.1em 0.2em;
+      border-top: 1px solid #b2b2b2; }
+  #huffpostcode-march-madness .popup .team1 {
+    border-right: 1px solid #b2b2b2; }
+    #huffpostcode-march-madness .popup .team1 .seed {
+      left: 0; }
+    #huffpostcode-march-madness .popup .team1 .name {
+      right: 0; }
+    #huffpostcode-march-madness .popup .team1 .score {
+      text-align: right;
+      border-left: 1px solid #b2b2b2; }
+  #huffpostcode-march-madness .popup .team2 {
+    border-left: 1px solid #b2b2b2; }
+    #huffpostcode-march-madness .popup .team2 .seed {
+      right: 0; }
+    #huffpostcode-march-madness .popup .team2 .score {
+      border-right: 1px solid #b2b2b2; }
+  #huffpostcode-march-madness .popup .title {
+    font-family: 'Roboto Slab', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 1.5em; }
+  #huffpostcode-march-madness .popup .text {
+    margin: 0;
+    font-size: 1.2em; }
+  #huffpostcode-march-madness .popup .continue {
+    color: white;
+    background-color: #b2b2b2;
+    text-align: center;
+    padding: 1.8em 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+    #huffpostcode-march-madness .popup .continue .text {
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 1.3em;
+      letter-spacing: 0.18em;
+      text-transform: uppercase; }
