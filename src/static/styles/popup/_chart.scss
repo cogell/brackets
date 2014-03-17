@@ -1,29 +1,46 @@
 .popup .chart{
-	path {
-		stroke: $black;
-		stroke-width: 2;
-		fill: none;
-	}
-
-	line {
-		stroke-width: 2;
-		stroke: $light-grey;
-	}
-
-	circle {
-		stroke: $grey;
-		stroke-width: 2;
-		fill: white;
-	}
-
 
 	text {
 		font-family: $slab;
 		font-size: 10pt;
 		text-anchor: middle;
+		fill: $light-grey;
 	}
-
+	.axis {
+		stroke-width: 2;
+		stroke: $light-grey;
+	}
 	.xAxisText {
 		fill: $light-grey;
 	}
+
+	.team1,
+	.team2{
+		.scoreLine {
+			stroke: $light-grey;
+			stroke-width: 2;
+			fill: none;
+		}
+		.scoreCircle {
+			stroke: $light-grey;;
+			stroke-width: 2;
+			fill: white;
+		}
+		text {
+			alignment-baseline: middle;
+		}
+	}
+
+	.winner{
+		.scoreLine {
+			stroke: $black;
+		}
+		.scoreCircle {
+			stroke: $black;
+		}
+		text {
+			fill: $black;
+		}
+	}
+
 }

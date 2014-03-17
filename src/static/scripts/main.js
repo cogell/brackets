@@ -28,16 +28,22 @@ requirejs(['requirejs-config'],function(){
 
 			// need to walk thru each array and compare points to give
 			// the higher point the top number on that circle
-			_.each(team1, function (team1Score, i) {
+			_.each(team1, function (team1, i) {
+				var team1Score = team1.score;
 				var team2Score = team2[i].score;
+				// console.log('team1Score, team2Score', team1Score, team2Score);
+
 				if(team2Score > team1Score){
+					// console.log('team2[i] is bigger', team2[i]);
 					team2[i].higher = true;
+					// console.log('team2[i]', team2[i]);
 				} else {
-					team1[i].higher = true;
+					team1.higher = true;
 				}
 			});
 
 			console.log('team1', team1);
+			console.log('team2', team2);
 
 			var xAxisData = ['Start', '1st Half', '2nd Half', 'Total'];
 			var margin = 20;
@@ -91,6 +97,7 @@ requirejs(['requirejs-config'],function(){
 
 			// draw dead simple xAxis line
 			shiftGroup.append('line')
+					.attr('class', 'x axis')
 					.attr('x1', 0 - margin)
 					.attr('y1', - xaxisMargin/2)
 					.attr('x2', function () {
@@ -112,8 +119,9 @@ requirejs(['requirejs-config'],function(){
 								// .style('text-anchor', 'middle');
 
 			//// CREATE G's FOR EACH TEAM
-			var team1Group = shiftGroup.append('g').attr('class', 'team1');
+			// render winner last !!!
 			var team2Group = shiftGroup.append('g').attr('class', 'team2');
+			var team1Group = shiftGroup.append('g').attr('class', 'team1 winner');
 
 			//// TEAM 1 & TEAM 2 PATHS
 			createTeamPaths( team1Group, team1 );
@@ -122,7 +130,7 @@ requirejs(['requirejs-config'],function(){
 			function createTeamPaths (g, data) {
 				g.append('path')
 					.datum(data)
-					.attr('class', 'line')
+					.attr('class', 'scoreLine')
 					.attr('d', function (data) {
 						var score = [];
 						_.each(data,function (datum) {
@@ -142,8 +150,9 @@ requirejs(['requirejs-config'],function(){
 											.enter()
 										.append('g')
 											.attr('class', 'node');
-
+				// circle
 				node.append('circle')
+					.attr('class', 'scoreCircle')
 					.attr('r', function (d) {
 						// make the first zero nothing
 						if (d.score===0) return 0;
@@ -156,16 +165,18 @@ requirejs(['requirejs-config'],function(){
 						return -1 * y(d.score);
 					});
 
+				// text
 				node.append('text')
 					.attr('dx', function(d, i){
 						return x(i);
 					})
 					.attr('dy', function (d) {
-						var bump = -10;
+						var bump = -15;
 						if(d.higher){
-							bump = 10;
+							console.log('higher d', d);
+							bump = 12;
 						}
-						return (-1 * y(d.score)) + bump;
+						return (-1 * y(d.score)) - bump;
 					})
 					.text(function (d) {
 						if(d.score===0) return '';

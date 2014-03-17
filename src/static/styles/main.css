@@ -394,23 +394,32 @@ body {
       right: 0; }
     #huffpostcode-march-madness .popup .team2 .score {
       border-right: 1px solid #b2b2b2; }
-  #huffpostcode-march-madness .popup .chart path {
-    stroke: #333333;
-    stroke-width: 2;
-    fill: none; }
-  #huffpostcode-march-madness .popup .chart line {
-    stroke-width: 2;
-    stroke: #b2b2b2; }
-  #huffpostcode-march-madness .popup .chart circle {
-    stroke: #4c4c4c;
-    stroke-width: 2;
-    fill: white; }
   #huffpostcode-march-madness .popup .chart text {
     font-family: 'Roboto Slab', sans-serif;
     font-size: 10pt;
-    text-anchor: middle; }
+    text-anchor: middle;
+    fill: #b2b2b2; }
+  #huffpostcode-march-madness .popup .chart .axis {
+    stroke-width: 2;
+    stroke: #b2b2b2; }
   #huffpostcode-march-madness .popup .chart .xAxisText {
     fill: #b2b2b2; }
+  #huffpostcode-march-madness .popup .chart .team1 .scoreLine, #huffpostcode-march-madness .popup .chart .team2 .scoreLine {
+    stroke: #b2b2b2;
+    stroke-width: 2;
+    fill: none; }
+  #huffpostcode-march-madness .popup .chart .team1 .scoreCircle, #huffpostcode-march-madness .popup .chart .team2 .scoreCircle {
+    stroke: #b2b2b2;
+    stroke-width: 2;
+    fill: white; }
+  #huffpostcode-march-madness .popup .chart .team1 text, #huffpostcode-march-madness .popup .chart .team2 text {
+    alignment-baseline: middle; }
+  #huffpostcode-march-madness .popup .chart .winner .scoreLine {
+    stroke: #333333; }
+  #huffpostcode-march-madness .popup .chart .winner .scoreCircle {
+    stroke: #333333; }
+  #huffpostcode-march-madness .popup .chart .winner text {
+    fill: #333333; }
   #huffpostcode-march-madness .popup .title {
     font-family: 'Roboto Slab', sans-serif;
     text-transform: uppercase;
