@@ -7,13 +7,38 @@ requirejs(['requirejs-config'],function(){
 		], function($, d3, Bracket){
 
 		$(document).ready(function () {
-			Bracket.init();
+			// Bracket.init();
 
 			// TODO: move into popup view //
 
+			// TODO: handle overtime in chart
 			// set up variables
-			var data = [ 20, 45, 78 ];
-			data.unshift(0); // all games start with 0 points
+			var team1 = [
+				{score: 20},
+				{score: 45},
+				{score: 78}
+			];
+			var team2 = [
+				{score: 22},
+				{score: 38},
+				{score: 60}
+			];
+			team1.unshift({score: 0}); // all games start with 0 points
+			team2.unshift({score: 0}); // all games start with 0 points
+
+			// need to walk thru each array and compare points to give
+			// the higher point the top number on that circle
+			_.each(team1, function (team1Score, i) {
+				var team2Score = team2[i].score;
+				if(team2Score > team1Score){
+					team2[i].higher = true;
+				} else {
+					team1[i].higher = true;
+				}
+			});
+
+			console.log('team1', team1);
+
 			var xAxisData = ['Start', '1st Half', '2nd Half', 'Total'];
 			var margin = 20;
 			var xaxisMargin = 30;
@@ -22,10 +47,12 @@ requirejs(['requirejs-config'],function(){
 
 			// define our X and Y scale functions
 			var y = d3.scale.linear()
-								.domain([0, d3.max(data)])
+								.domain([0, d3.max(team1, function (t) {
+									return t.score;
+								})])
 								.range([0+xaxisMargin, height]);
 			var x = d3.scale.linear()
-								.domain([0, data.length])
+								.domain([0, team1.length])
 								// don't know why I need to make the range extra big to get the
 								// drawing to render correctly
 								.range([0, width + margin + margin]);
@@ -79,35 +106,72 @@ requirejs(['requirejs-config'],function(){
 								.text(function(d){return d;})
 								.attr('y', 0)
 								.attr('x', function (d, i) {
-									console.log('d, i', d, i);
-									console.log('x(i)', x(i));
 									return x(i);
 								})
 								.attr('class', 'xAxisText');
 								// .style('text-anchor', 'middle');
 
-			// add path
-			shiftGroup.append('path')
+			//// CREATE G's FOR EACH TEAM
+			var team1Group = shiftGroup.append('g').attr('class', 'team1');
+			var team2Group = shiftGroup.append('g').attr('class', 'team2');
+
+			//// TEAM 1 & TEAM 2 PATHS
+			createTeamPaths( team1Group, team1 );
+			createTeamPaths( team2Group, team2 );
+
+			function createTeamPaths (g, data) {
+				g.append('path')
 					.datum(data)
 					.attr('class', 'line')
-					.attr('d', line);
+					.attr('d', function (data) {
+						var score = [];
+						_.each(data,function (datum) {
+							score.push(datum.score);
+						});
+						return line(score);
+					});
+			}
 
-			// add circles
-			shiftGroup.selectAll('circle')
-					.data(data)
-					.enter()
-					.append('circle')
-					.attr('r', function (i) {
+			//// TEAM 1 & TEAM 2 POINTS
+			createTeamCircles( team1Group, team1 );
+			createTeamCircles( team2Group, team2 );
+
+			function createTeamCircles ( g, data ) {
+				var node = g.selectAll('.nodes')
+											.data(data)
+											.enter()
+										.append('g')
+											.attr('class', 'node');
+
+				node.append('circle')
+					.attr('r', function (d) {
 						// make the first zero nothing
-						if (i===0) return 0;
+						if (d.score===0) return 0;
 						return 5;
 					})
 					.attr('cx', function (d, i) {
 						return x(i);
 					})
 					.attr('cy', function (d) {
-						return -1 * y(d);
+						return -1 * y(d.score);
 					});
+
+				node.append('text')
+					.attr('dx', function(d, i){
+						return x(i);
+					})
+					.attr('dy', function (d) {
+						var bump = -10;
+						if(d.higher){
+							bump = 10;
+						}
+						return (-1 * y(d.score)) + bump;
+					})
+					.text(function (d) {
+						if(d.score===0) return '';
+						return d.score;
+					});
+			}
 
 		});
 
