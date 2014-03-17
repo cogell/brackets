@@ -398,15 +398,19 @@ body {
     stroke: #333333;
     stroke-width: 2;
     fill: none; }
-  #huffpostcode-march-madness .popup .chart .line {
-    stroke: #4c4c4c; }
+  #huffpostcode-march-madness .popup .chart line {
+    stroke-width: 2;
+    stroke: #b2b2b2; }
   #huffpostcode-march-madness .popup .chart circle {
     stroke: #4c4c4c;
     stroke-width: 2;
     fill: white; }
   #huffpostcode-march-madness .popup .chart text {
     font-family: 'Roboto Slab', sans-serif;
-    font-size: 10pt; }
+    font-size: 10pt;
+    text-anchor: middle; }
+  #huffpostcode-march-madness .popup .chart .xAxisText {
+    fill: #b2b2b2; }
   #huffpostcode-march-madness .popup .title {
     font-family: 'Roboto Slab', sans-serif;
     text-transform: uppercase;

@@ -5,8 +5,9 @@
 		fill: none;
 	}
 
-	.line {
-		stroke: $grey;
+	line {
+		stroke-width: 2;
+		stroke: $light-grey;
 	}
 
 	circle {
@@ -15,8 +16,14 @@
 		fill: white;
 	}
 
+
 	text {
 		font-family: $slab;
 		font-size: 10pt;
+		text-anchor: middle;
+	}
+
+	.xAxisText {
+		fill: $light-grey;
 	}
 }

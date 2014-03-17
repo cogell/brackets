@@ -15,17 +15,20 @@ requirejs(['requirejs-config'],function(){
 			var data = [ 20, 45, 78 ];
 			data.unshift(0); // all games start with 0 points
 			var xAxisData = ['Start', '1st Half', '2nd Half', 'Total'];
-			var margin = 10;
-			var width =  320 - margin - margin;
-			var height = 100 - margin - margin;
+			var margin = 20;
+			var xaxisMargin = 30;
+			var width =  300 - margin - margin;
+			var height = 150 - margin - margin;
 
 			// define our X and Y scale functions
 			var y = d3.scale.linear()
 								.domain([0, d3.max(data)])
-								.range([0, height]);
+								.range([0+xaxisMargin, height]);
 			var x = d3.scale.linear()
 								.domain([0, data.length])
-								.range([0, width]);
+								// don't know why I need to make the range extra big to get the
+								// drawing to render correctly
+								.range([0, width + margin + margin]);
 
 			// define our line function
 			var line = d3.svg.line()
@@ -43,6 +46,8 @@ requirejs(['requirejs-config'],function(){
 										.scale(x)
 										.orient('bottom');
 
+			//// RENDERING STEPS
+
 			// define svg chart
 			var svg = d3.select('.chart')
 									.append('svg')
@@ -51,16 +56,35 @@ requirejs(['requirejs-config'],function(){
 								.append('g')
 									.attr('transform', 'translate('+margin+','+margin+')');
 
-			//// RENDERING STEPS
 
-			// add xAxis
-			svg.append('g')
-					.attr('class', 'x axis')
-					.attr('transform', 'translate(0,' + height + ')')
-					.call(xAxis);
-
+			// define a shifted group to make a more natural x,y coordinate system
+			// out of the SVG area
 			var shiftGroup = svg.append('g')
 					.attr('transform', 'translate( 0,' + height + ')');
+
+			// draw dead simple xAxis line
+			shiftGroup.append('line')
+					.attr('x1', 0 - margin)
+					.attr('y1', - xaxisMargin/2)
+					.attr('x2', function () {
+						return x(3) + margin;
+					})
+					.attr('y2', - xaxisMargin/2);
+
+			// add labels to xAxis
+			shiftGroup.selectAll('text')
+								.data(xAxisData)
+								.enter()
+								.append('text')
+								.text(function(d){return d;})
+								.attr('y', 0)
+								.attr('x', function (d, i) {
+									console.log('d, i', d, i);
+									console.log('x(i)', x(i));
+									return x(i);
+								})
+								.attr('class', 'xAxisText');
+								// .style('text-anchor', 'middle');
 
 			// add path
 			shiftGroup.append('path')
