@@ -1,0 +1,22 @@
+.popup .chart{
+	path {
+		stroke: $black;
+		stroke-width: 2;
+		fill: none;
+	}
+
+	.line {
+		stroke: $grey;
+	}
+
+	circle {
+		stroke: $grey;
+		stroke-width: 2;
+		fill: white;
+	}
+
+	text {
+		font-family: $slab;
+		font-size: 10pt;
+	}
+}

@@ -394,6 +394,19 @@ body {
       right: 0; }
     #huffpostcode-march-madness .popup .team2 .score {
       border-right: 1px solid #b2b2b2; }
+  #huffpostcode-march-madness .popup .chart path {
+    stroke: #333333;
+    stroke-width: 2;
+    fill: none; }
+  #huffpostcode-march-madness .popup .chart .line {
+    stroke: #4c4c4c; }
+  #huffpostcode-march-madness .popup .chart circle {
+    stroke: #4c4c4c;
+    stroke-width: 2;
+    fill: white; }
+  #huffpostcode-march-madness .popup .chart text {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 10pt; }
   #huffpostcode-march-madness .popup .title {
     font-family: 'Roboto Slab', sans-serif;
     text-transform: uppercase;
