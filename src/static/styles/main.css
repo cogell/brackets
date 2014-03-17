@@ -317,10 +317,6 @@ body {
     color: #333333; }
   #huffpostcode-march-madness .popup {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     padding: 10px;
     background: white;
     padding-top: 28px; }
@@ -424,20 +420,54 @@ body {
     font-family: 'Roboto Slab', sans-serif;
     text-transform: uppercase;
     margin: 0;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    font-weight: 700; }
   #huffpostcode-march-madness .popup .text {
     margin: 0;
     font-size: 1.2em; }
+  #huffpostcode-march-madness .popup .notable {
+    overflow: auto;
+    margin: 10px; }
+  #huffpostcode-march-madness .popup .badgeText {
+    width: 58%;
+    float: left; }
+  #huffpostcode-march-madness .popup .badge-wrapper {
+    position: relative;
+    width: 40%;
+    padding-bottom: 40%;
+    float: left; }
+  #huffpostcode-march-madness .popup .badge {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 10px; }
+  #huffpostcode-march-madness .popup .badge.Blowout {
+    background-image: url('/images/badges/Blowout.svg'); }
+  #huffpostcode-march-madness .popup .badge.BuzzerBeater {
+    background-image: url('/images/badges/BuzzerBeater.svg'); }
+  #huffpostcode-march-madness .popup .badge.Cinderella {
+    background-image: url('/images/badges/Cinderella.svg'); }
+  #huffpostcode-march-madness .popup .badge.Injury {
+    background-image: url('/images/badges/Injury.svg'); }
+  #huffpostcode-march-madness .popup .badge.OnFire {
+    background-image: url('/images/badges/OnFire.svg'); }
+  #huffpostcode-march-madness .popup .badge.Player {
+    background-image: url('/images/badges/Player.svg'); }
+  #huffpostcode-march-madness .popup .badge.Stat {
+    background-image: url('/images/badges/Stat.svg'); }
+  #huffpostcode-march-madness .popup .badge.Trophy {
+    background-image: url('/images/badges/Trophy.svg'); }
   #huffpostcode-march-madness .popup .continue {
     color: white;
     background-color: #b2b2b2;
     text-align: center;
     padding: 1.8em 0;
-    cursor: pointer;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%; }
+    cursor: pointer; }
     #huffpostcode-march-madness .popup .continue .text {
       font-family: 'Roboto Slab', sans-serif;
       font-size: 1.3em;

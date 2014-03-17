@@ -1,0 +1,51 @@
+.popup .notable {
+	overflow: auto;
+	margin: $popup-padding;
+}
+
+.popup .badgeText {
+	width: 58%; // make run for badge
+	float: left;
+}
+
+.popup .badge-wrapper{
+	position: relative;
+	width: 40%;
+	padding-bottom: 40%; // note padding-bottom trick! http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/
+	float: left;
+}
+
+.popup .badge {
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	margin: $popup-padding;
+}
+
+
+.popup .badge.Blowout{
+	background-image: url('/images/badges/Blowout.svg');
+}
+.popup .badge.BuzzerBeater{
+	background-image: url('/images/badges/BuzzerBeater.svg');
+}
+.popup .badge.Cinderella{
+	background-image: url('/images/badges/Cinderella.svg');
+}
+.popup .badge.Injury{
+	background-image: url('/images/badges/Injury.svg');
+}
+.popup .badge.OnFire{
+	background-image: url('/images/badges/OnFire.svg');
+}
+.popup .badge.Player{
+	background-image: url('/images/badges/Player.svg');
+}
+.popup .badge.Stat{
+	background-image: url('/images/badges/Stat.svg');
+}
+.popup .badge.Trophy{
+	background-image: url('/images/badges/Trophy.svg');
+}
