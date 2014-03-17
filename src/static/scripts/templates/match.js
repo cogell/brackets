@@ -1,4 +1,6 @@
-this["HPC"] = this["HPC"] || {};this["HPC"]["templates"] = this["HPC"]["templates"] || {};this["HPC"]["templates"]["match"] = function (Handlebars,depth0,helpers,partials,data) {
+define(["handlebars"],function(){
+
+return Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
@@ -62,4 +64,6 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += escapeExpression(stack1)
     + "\">Read More ››</a>\n	</div>\n</div>";
   return buffer;
-  };
+  });
+
+});

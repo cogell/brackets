@@ -1,4 +1,7 @@
-$popup-padding: 10px;
+$large-padding: 20px;
+$medium-padding: 10px;
+
+$popup-padding: $medium-padding;
 $popup-close-size: 28px;
 
 $common-border: 1px solid $light-grey;

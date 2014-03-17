@@ -186,8 +186,7 @@ body {
    ========================================================================== */
   /**
  * Remove most spacing between table cells.
- */
-  background-color: pink; }
+ */ }
   #huffpostcode-march-madness *, #huffpostcode-march-madness *:before, #huffpostcode-march-madness *:after {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
@@ -315,6 +314,90 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 62.5%;
     color: #333333; }
+  #huffpostcode-march-madness .smallLanding header {
+    background-color: #e5e5e5;
+    border-bottom: 1px solid #4c4c4c;
+    padding: 10px;
+    overflow: auto; }
+    #huffpostcode-march-madness .smallLanding header .title-wrapper {
+      position: relative;
+      width: 70%;
+      padding-bottom: 10%;
+      float: left; }
+    #huffpostcode-march-madness .smallLanding header .title {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+      -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      font-family: 'Roboto Slab', sans-serif;
+      font-weight: 700;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      margin: 0; }
+    #huffpostcode-march-madness .smallLanding header .social {
+      float: right;
+      width: 30%; }
+    #huffpostcode-march-madness .smallLanding header .fb-wrapper, #huffpostcode-march-madness .smallLanding header .twit-wrapper {
+      float: right; }
+    #huffpostcode-march-madness .smallLanding header .fb-wrapper, #huffpostcode-march-madness .smallLanding header .twit-wrapper {
+      position: relative;
+      width: 40%;
+      padding-bottom: 40%; }
+    #huffpostcode-march-madness .smallLanding header .facebook, #huffpostcode-march-madness .smallLanding header .twitter {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      cursor: pointer; }
+    #huffpostcode-march-madness .smallLanding header .facebook {
+      background-image: url('/images/twitter.svg'); }
+    #huffpostcode-march-madness .smallLanding header .twitter {
+      background-image: url('/images/facebook.svg'); }
+  #huffpostcode-march-madness .smallLanding .smallBracket .top, #huffpostcode-march-madness .smallLanding .smallBracket .bottom {
+    width: 100%; }
+  #huffpostcode-march-madness .smallLanding .smallBracket .region {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center; }
+  #huffpostcode-march-madness .smallLanding .smallBracket .midwest, #huffpostcode-march-madness .smallLanding .smallBracket .south, #huffpostcode-march-madness .smallLanding .smallBracket .west, #huffpostcode-march-madness .smallLanding .smallBracket .east {
+    display: inline-block;
+    width: 49%;
+    padding-bottom: 60%; }
+  #huffpostcode-march-madness .smallLanding .smallBracket .finals {
+    width: 75%;
+    margin: 0 auto;
+    padding-bottom: 10%; }
+  #huffpostcode-march-madness .smallLanding .smallBracket .midwest {
+    background-image: url('/images/smallBrackets/left.svg'); }
+  #huffpostcode-march-madness .smallLanding .smallBracket .south {
+    background-image: url('/images/smallBrackets/right.svg'); }
+  #huffpostcode-march-madness .smallLanding .smallBracket .west {
+    background-image: url('/images/smallBrackets/left.svg'); }
+  #huffpostcode-march-madness .smallLanding .smallBracket .east {
+    background-image: url('/images/smallBrackets/right.svg'); }
+  #huffpostcode-march-madness .smallLanding .smallBracket .finals {
+    background-image: url('/images/smallBrackets/finals.svg'); }
+  #huffpostcode-march-madness .smallLanding .smallBracket span {
+    font-family: 'Roboto Slab', sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
   #huffpostcode-march-madness .popup {
     position: absolute;
     padding: 10px;

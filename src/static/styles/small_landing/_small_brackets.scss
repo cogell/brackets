@@ -1,0 +1,49 @@
+.smallLanding .smallBracket {
+
+	.top,
+	.bottom {
+		width: 100%;
+	}
+
+	.region {
+		position: relative; // for the text
+
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		text-align: center;
+	}
+
+	.midwest,
+	.south,
+	.west,
+	.east {
+		// background-color: rgba(pink, 0.2);
+		display: inline-block;
+		width: 49%;
+		padding-bottom: 60%;
+	}
+
+	.finals{
+		width: 75%;
+		margin: 0 auto;
+		padding-bottom: 10%;
+	}
+
+	.midwest { background-image: url('/images/smallBrackets/left.svg')}
+	.south { background-image: url('/images/smallBrackets/right.svg')}
+	.west { background-image: url('/images/smallBrackets/left.svg')}
+	.east { background-image: url('/images/smallBrackets/right.svg')}
+	.finals { background-image: url('/images/smallBrackets/finals.svg')}
+
+	span {
+		font-family: $slab;
+		text-transform: uppercase;
+		font-size: 2em;
+
+		position: absolute;
+		top: 50%; left: 50%;
+		@include transform(translate(-50%,-50%));
+	}
+
+}

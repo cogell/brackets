@@ -1,6 +1,6 @@
 define(function (require) {
 	require('jquery');
-	require('lodash');
+	require('underscore');
 	require('tabletop');
 
 	var Artboard = require('artboard');
