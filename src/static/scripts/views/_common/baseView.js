@@ -1,7 +1,12 @@
 define(function (require) {
 	require('backbone');
+	var pubsub = require('pubsub');
 
 	return Backbone.View.extend({
+		initialize: function  () {
+			// Backbone.View.apply(this, options);
+			this.pubsub = pubsub;
+		},
 
 		render: function () {
 			if( this.model ){

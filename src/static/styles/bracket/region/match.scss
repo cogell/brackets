@@ -1,0 +1,28 @@
+$match-width: 100px;
+$match-height: 50px;
+.match {
+	// display: table;
+	width: $match-width;
+	height: $match-height;
+
+	background-color: $x-light-grey;
+	border-top: 2px solid $light-grey;
+
+	margin: 2px;
+
+	list-style-type: none; // remove defaults
+	padding-left: 0; // remove defaults
+
+	text-align: left;
+}
+
+.match .team {
+	width: $match-width;
+	height: $match-height / 2;
+	padding: 3px;
+
+	// display: table-cell;
+  // vertical-align: middle;
+  .name{}
+  .score{float: right;}
+}

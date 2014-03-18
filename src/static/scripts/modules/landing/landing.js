@@ -1,5 +1,5 @@
 define(function (require) {
-	var BaseView = require('baseView');
+	var BaseView = require('BaseView');
 	var _landing = require('templates/small_landing');
 	require('fittext');
 
@@ -17,6 +17,11 @@ define(function (require) {
 			'click .finals': 'regionClicked'
 		},
 
+		initialize: function () {
+			BaseView.prototype.initialize.call(this);
+			this.render();
+		},
+
 		render: function () {
 			BaseView.prototype.render.call(this);
 			this.$el.addClass('smallLanding');
@@ -28,6 +33,7 @@ define(function (require) {
 			e.preventDefault();
 			var region = $(e.target).closest('.region').data('region');
 			console.log(region + ' region was clicked!');
+			this.pubsub.trigger('test');
 		},
 
 

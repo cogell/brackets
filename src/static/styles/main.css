@@ -314,17 +314,17 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 62.5%;
     color: #333333; }
-  #huffpostcode-march-madness .smallLanding header {
+  #huffpostcode-march-madness header {
     background-color: #e5e5e5;
     border-bottom: 1px solid #4c4c4c;
     padding: 10px;
     overflow: auto; }
-    #huffpostcode-march-madness .smallLanding header .title-wrapper {
+    #huffpostcode-march-madness header .title-wrapper {
       position: relative;
       width: 70%;
       padding-bottom: 10%;
       float: left; }
-    #huffpostcode-march-madness .smallLanding header .title {
+    #huffpostcode-march-madness header .title {
       position: absolute;
       top: 50%;
       -webkit-transform: translate(0, -50%);
@@ -337,16 +337,16 @@ body {
       font-size: 1.5em;
       text-transform: uppercase;
       margin: 0; }
-    #huffpostcode-march-madness .smallLanding header .social {
+    #huffpostcode-march-madness header .social {
       float: right;
       width: 30%; }
-    #huffpostcode-march-madness .smallLanding header .fb-wrapper, #huffpostcode-march-madness .smallLanding header .twit-wrapper {
+    #huffpostcode-march-madness header .fb-wrapper, #huffpostcode-march-madness header .twit-wrapper {
       float: right; }
-    #huffpostcode-march-madness .smallLanding header .fb-wrapper, #huffpostcode-march-madness .smallLanding header .twit-wrapper {
+    #huffpostcode-march-madness header .fb-wrapper, #huffpostcode-march-madness header .twit-wrapper {
       position: relative;
       width: 40%;
       padding-bottom: 40%; }
-    #huffpostcode-march-madness .smallLanding header .facebook, #huffpostcode-march-madness .smallLanding header .twitter {
+    #huffpostcode-march-madness header .facebook, #huffpostcode-march-madness header .twitter {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -356,9 +356,9 @@ body {
       background-position: center center;
       background-size: cover;
       cursor: pointer; }
-    #huffpostcode-march-madness .smallLanding header .facebook {
+    #huffpostcode-march-madness header .facebook {
       background-image: url('/images/twitter.svg'); }
-    #huffpostcode-march-madness .smallLanding header .twitter {
+    #huffpostcode-march-madness header .twitter {
       background-image: url('/images/facebook.svg'); }
   #huffpostcode-march-madness .smallLanding .smallBracket .top, #huffpostcode-march-madness .smallLanding .smallBracket .bottom {
     width: 100%; }
@@ -556,3 +556,49 @@ body {
       font-size: 1.3em;
       letter-spacing: 0.18em;
       text-transform: uppercase; }
+  #huffpostcode-march-madness #bracket .region {
+    background-color: pink;
+    width: 320px;
+    height: 480px;
+    margin: 0 auto; }
+  #huffpostcode-march-madness .south, #huffpostcode-march-madness .west, #huffpostcode-march-madness .east, #huffpostcode-march-madness .finals {
+    display: none; }
+  #huffpostcode-march-madness .round {
+    width: 31%;
+    margin-right: 10px;
+    float: left; }
+    #huffpostcode-march-madness .round .title {
+      display: none; }
+  #huffpostcode-march-madness .round2 {
+    margin-top: 2%; }
+  #huffpostcode-march-madness .round2 .match {
+    margin-bottom: 8%; }
+  #huffpostcode-march-madness .round3 {
+    margin-top: 10%; }
+  #huffpostcode-march-madness .round3 .match {
+    margin-bottom: 67%; }
+  #huffpostcode-march-madness .round4 {
+    margin-top: 28%;
+    margin-left: -50px; }
+  #huffpostcode-march-madness .round4 .match {
+    margin-bottom: 184%; }
+  #huffpostcode-march-madness .round5 {
+    margin-top: 66%;
+    margin-left: -70px; }
+  #huffpostcode-march-madness .round6, #huffpostcode-march-madness .round7 {
+    display: none; }
+  #huffpostcode-march-madness .match {
+    width: 100px;
+    height: 50px;
+    background-color: #e5e5e5;
+    border-top: 2px solid #b2b2b2;
+    margin: 2px;
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left; }
+  #huffpostcode-march-madness .match .team {
+    width: 100px;
+    height: 25px;
+    padding: 3px; }
+    #huffpostcode-march-madness .match .team .score {
+      float: right; }

@@ -20,8 +20,9 @@ body{
 	@import 'measurements';
 	@import 'type';
 
+	@import 'header/header';
+
 	@import 'small_landing/small_landing';
-	@import 'small_landing/header';
 	@import 'small_landing/small_brackets';
 
 	@import 'popup/popup';
@@ -31,5 +32,8 @@ body{
 	@import 'popup/text';
 	@import 'popup/badge';
 	@import 'popup/continue';
+
+	@import 'bracket/region/region';
+	@import 'bracket/region/match';
 
 }
