@@ -28,7 +28,16 @@ define(function (require) {
 
 				});
 			}
+		},
+
+		show: function () {
+			this.$el.addClass('active');
+		},
+
+		hide: function () {
+			this.$el.removeClass('active');
 		}
+
 
 	});
 });

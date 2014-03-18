@@ -1,6 +1,6 @@
 define(function (require) {
 	var BaseView = require('BaseView');
-	var _landing = require('templates/small_landing');
+	var _landing = require('templates/landing');
 	require('fittext');
 
 	return BaseView.extend({
@@ -20,11 +20,12 @@ define(function (require) {
 		initialize: function () {
 			BaseView.prototype.initialize.call(this);
 			this.render();
+			this.show();
 		},
 
 		render: function () {
 			BaseView.prototype.render.call(this);
-			this.$el.addClass('smallLanding');
+			this.$el.addClass('landing');
 			// this.$el.find('.fittext').fitText();
 		},
 
@@ -33,7 +34,7 @@ define(function (require) {
 			e.preventDefault();
 			var region = $(e.target).closest('.region').data('region');
 			console.log(region + ' region was clicked!');
-			this.pubsub.trigger('test');
+			this.pubsub.trigger('region:clicked', region);
 		},
 
 
@@ -44,6 +45,14 @@ define(function (require) {
 
 		twitClick: function (e) {
 			e.preventDefault();
+		},
+
+		show: function () {
+			this.$el.addClass('active');
+		},
+
+		hide: function () {
+			this.$el.removeClass('active');
 		}
 
 

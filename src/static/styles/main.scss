@@ -21,9 +21,10 @@ body{
 	@import 'type';
 
 	@import 'header/header';
+	@import 'header/map';
 
-	@import 'small_landing/small_landing';
-	@import 'small_landing/small_brackets';
+	@import 'landing/landing';
+	@import 'landing/brackets';
 
 	@import 'popup/popup';
 	@import 'popup/close';

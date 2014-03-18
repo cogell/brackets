@@ -1,58 +1,66 @@
-#bracket .region {
-	background-color: pink;
+#bracket {
 
-	width: 320px;
-	height: 480px;
-	margin: 0 auto;
-}
+	.region {
+		display: none;
 
-// .midwest,
-.south,
-.west,
-.east,
-.finals{
-	display: none;
-}
+		width: 320px;
+		height: 480px;
+		margin: 0 auto;
+	}
 
-.round{
-	width: 31%;
-	margin-right: 10px;
-	float: left;
-	.title { display: none; }
-}
+	.region.active{
+		display: block;
+	}
 
-.round2 { margin-top: 2%; }
-.round2 .match { margin-bottom: 8%; }
+	// .midwest,
+	.south,
+	.west,
+	.east,
+	.finals{
+		display: none;
+	}
 
-.round3 { margin-top: 10%; }
-.round3 .match { margin-bottom: 67%; }
+	.round{
+		width: 31%;
+		margin-right: 10px;
+		float: left;
+		.title { display: none; }
+	}
 
-.round4 {
-	margin-top: 28%;
-	margin-left: -50px;
-}
-.round4 .match { margin-bottom: 184%; }
+	.round2 { margin-top: 2%; }
+	.round2 .match { margin-bottom: 8%; }
 
-.round5 {
-	margin-top: 66%;
-	margin-left: -70px;
-}
-// .round5 .match { margin-bottom: 181%; }
+	.round3 { margin-top: 10%; }
+	.round3 .match { margin-bottom: 67%; }
 
-// .round4 {
-// 	margin-top: 80px;
-// 	.match {
-// 		margin-bottom: 160px;
+	.round4 {
+		margin-top: 28%;
+		margin-left: -50px;
+	}
+	.round4 .match { margin-bottom: 184%; }
 
-// 	}
-// }
+	.round5 {
+		margin-top: 66%;
+		margin-left: -70px;
+	}
+	// .round5 .match { margin-bottom: 181%; }
 
-// .round2,
-// .round3,
-// .round4,
-// .round5,
-.round6,
-.round7
-{
-	display: none;
+	// .round4 {
+	// 	margin-top: 80px;
+	// 	.match {
+	// 		margin-bottom: 160px;
+
+	// 	}
+	// }
+
+	// .round2,
+	// .round3,
+	// .round4,
+	// .round5,
+	.round6,
+	.round7
+	{
+		display: none;
+	}
+
 }

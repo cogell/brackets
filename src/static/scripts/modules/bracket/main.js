@@ -10,21 +10,53 @@ define(function (require) {
 
 	return {
 		allMatches: [],
+		pubsub: pubsub,
 		main: function ($root) {
 
 			this.$root = $root;
 
-			pubsub.trigger('bracket:loading');
+			this.pubsub.trigger('bracket:loading');
 
+			this.setAPI();
 			this.createRegionCollections();
 			this.createViews();
 			this.initTabletop();
 
-			pubsub.trigger('bracket:loaded');
+			this.pubsub.trigger('bracket:loaded');
 
 			// add functionality to region-view to render a match view
 			// for each model, will need to parse into different divs
 			// based on their round
+		},
+
+		setAPI: function () {
+			this.pubsub.on('region:clicked', this.regionClicked, this);
+			this.pubsub.on('map:clicked', this.mapClicked, this);
+		},
+		mapClicked: function(){
+			this.midwestView.hide();
+			this.southView.hide();
+			this.westView.hide();
+			this.eastView.hide();
+			this.finalsView.hide();
+		},
+
+		regionClicked: function ( regionStr ) {
+			if ( regionStr == 'midwest' ){
+				this.midwestView.show();
+			}
+			else if ( regionStr == 'south' ){
+				this.southView.show();
+			}
+			else if ( regionStr == 'west' ){
+				this.westView.show();
+			}
+			else if ( regionStr == 'east' ){
+				this.eastView.show();
+			}
+			else if ( regionStr == 'finals' ){
+				this.finalsView.show();
+			}
 		},
 
 		createRegionCollections: function () {
