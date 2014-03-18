@@ -366,7 +366,8 @@ body {
     float: right;
     width: 100px;
     height: 80px;
-    margin-top: -5px; }
+    margin-top: -5px;
+    cursor: pointer; }
   #huffpostcode-march-madness header .map-wrapper.midwest, #huffpostcode-march-madness header .map-wrapper.south, #huffpostcode-march-madness header .map-wrapper.west, #huffpostcode-march-madness header .map-wrapper.east, #huffpostcode-march-madness header .map-wrapper.finals {
     display: block; }
   #huffpostcode-march-madness header .map {
@@ -431,10 +432,17 @@ body {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
   #huffpostcode-march-madness .popup {
+    display: none;
     position: absolute;
+    top: 0;
+    /*bottom:0;*/
+    left: 0;
+    right: 0;
     padding: 10px;
     background: white;
     padding-top: 28px; }
+  #huffpostcode-march-madness .popup.active {
+    display: block; }
   #huffpostcode-march-madness .popup .close {
     position: absolute;
     top: 0;
@@ -629,7 +637,14 @@ body {
     margin: 2px;
     list-style-type: none;
     padding-left: 0;
-    text-align: left; }
+    text-align: left;
+    cursor: pointer;
+    -webkit-transition: background-color, 0.3s, ease;
+    -moz-transition: background-color, 0.3s, ease;
+    transition: background-color, 0.3s, ease; }
+    #huffpostcode-march-madness .match:hover {
+      background-color: #333333;
+      color: white; }
   #huffpostcode-march-madness .match .team {
     width: 100px;
     height: 25px;

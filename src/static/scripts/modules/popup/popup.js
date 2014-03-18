@@ -1,14 +1,42 @@
 define(function (require) {
   var d3 = require('d3');
-  var BaseView = require('baseView');
+  var BaseView = require('BaseView');
 	var _popup = require('templates/popup');
 
 	return BaseView.extend({
 		template: _popup,
 
+    events: {
+      'click .close': 'closeClicked'
+    },
+
+    initialize: function(){
+      BaseView.prototype.initialize.call(this);
+      this.listenTo(this.model, 'add', this.modelChanged);
+      this.listenTo(this.model, 'changed', this.modelChanged);
+      this.render();
+    },
+
     render: function () {
       BaseView.prototype.render.call(this);
+      this.$el.addClass('popup');
       this.renderChart();
+    },
+
+    show: function () {
+      this.$el.addClass('active');
+    },
+
+    hide: function () {
+      this.$el.removeClass('active');
+    },
+
+    closeClicked: function () {
+      this.hide();
+    },
+
+    modelChanged: function (model) {
+      console.log('popup view: model changed');
     },
 
     // D3 YUMMY

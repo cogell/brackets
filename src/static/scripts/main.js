@@ -4,8 +4,9 @@ requirejs(['requirejs-config'],function(){
 		'pubsub',
 		'modules/landing/main',
 		'modules/header/main',
-		'modules/bracket/main'
-		], function(pubsub, LandingController, HeaderController, BracketController){
+		'modules/bracket/main',
+		'modules/popup/main'
+		], function(pubsub, LandingController, HeaderController, BracketController, PopupController){
 
 		$(document).ready(function () {
 
@@ -13,6 +14,7 @@ requirejs(['requirejs-config'],function(){
 			HeaderController.main( $root );
 			LandingController.main( $root );
 			BracketController.main( $root );
+			PopupController.main( $root );
 
 		});
 

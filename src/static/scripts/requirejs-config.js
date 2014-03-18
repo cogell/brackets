@@ -10,7 +10,8 @@ require.config({
     handlebars: '../../bower_components/handlebars/handlebars.runtime',
     fittext: '../../bower_components/FitText.js/jquery.fittext',
 
-    BaseView: 'views/_common/baseView'
+    BaseView: 'common/baseView',
+    pubsub: 'common/pubsub'
   },
 
   shim: {

@@ -14,6 +14,14 @@ $match-height: 50px;
 	padding-left: 0; // remove defaults
 
 	text-align: left;
+	cursor: pointer;
+
+	@include transition(background-color, 0.3s, ease);
+
+	&:hover{
+		background-color: $black;
+		color: white;
+	}
 }
 
 .match .team {

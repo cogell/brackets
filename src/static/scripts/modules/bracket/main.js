@@ -69,13 +69,10 @@ define(function (require) {
 
 		createViews: function () {
 
-			console.log('createRegionViews called');
 			this.midwestView = new Region({
 				collection: this.midwestCollection,
 				class: 'midwest'
 			});
-
-			console.log('this.midwestView', this.midwestView);
 
 			this.southView = new Region({
 				collection: this.southCollection,
@@ -124,7 +121,7 @@ define(function (require) {
 		dataHandler: function () {
 			var _this = this;
 			_.each(_this.tabletop.sheets(), function ( sheet ) {
-				console.log('sheet ' + sheet.name.toString() + ' about to be added' );
+				// console.log('sheet ' + sheet.name.toString() + ' about to be added' );
 				_this[sheet.name.toString()] = _this.createMatchesArray( sheet.name, sheet.elements, _this );
 			});
 		},
