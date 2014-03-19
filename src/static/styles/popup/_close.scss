@@ -1,14 +1,15 @@
 .popup .close{
 	position: absolute;
-	top: 0;
+	top: 1px;
 	right: 0;
 	font-size: 1.3em;
 
-	// at a larger screen
-	// top: -$popup-padding;
-	// right: -$popup-padding;
-
 	cursor: pointer; // handle click with javascript
+
+	&:hover {
+		.icon-close { color: $black }
+		.icon-stop { color: white }
+	}
 
 	.icon-close {
 		color: white;
@@ -17,12 +18,14 @@
 		top: 48%;
 		left: 50%;
 		@include transform(translate(-50%, -50%));
+		@include transition(color 0.2s ease);
 	}
 	.icon-stop {
 		color: $light-grey;
 		font-size: 2em;
 
 		background-color: white;
+		@include transition(color 0.2s ease);
 		// border: $common-border; // at a larger screen
 	}
 }

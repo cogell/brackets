@@ -10,20 +10,31 @@ define(function (require) {
       'click .close': 'closeClicked'
     },
 
-    initialize: function(){
+    initialize: function(options){
       BaseView.prototype.initialize.call(this);
-      this.listenTo(this.model, 'add', this.modelChanged);
-      this.listenTo(this.model, 'changed', this.modelChanged);
-      this.render();
+      this.windowHeight = options.windowHeight;
     },
 
     render: function () {
+      this.$el.empty();
       BaseView.prototype.render.call(this);
       this.$el.addClass('popup');
+
+      // conditional for continue button
+      if(this.model.get('match-post-link').length >= 5){
+        this.$el.find('.continue').addClass('active');
+      }
+
+      // conditional for centering styles
+      if(this.windowHeight >= 650){
+        this.$el.addClass('tall');
+      }
       this.renderChart();
+      this.show();
     },
 
     show: function () {
+      this.pubsub.trigger('popup:opened');
       this.$el.addClass('active');
     },
 
@@ -32,25 +43,30 @@ define(function (require) {
     },
 
     closeClicked: function () {
+      this.pubsub.trigger('popup:closed');
       this.hide();
-    },
-
-    modelChanged: function (model) {
-      console.log('popup view: model changed');
     },
 
     // D3 YUMMY
     // TEMP
     renderChart: function () {
+      var t11 = this.model.get('team1-first-half-score');
+      var t12 = this.model.get('team1-second-half-score');
+      var t13 = this.model.get('team1-total-score');
+
+      var t21 = this.model.get('team2-first-half-score');
+      var t22 = this.model.get('team2-second-half-score');
+      var t23 = this.model.get('team2-total-score');
+
       var team1 = [
-        {score: 20},
-        {score: 45},
-        {score: 78}
+        {score: t11},
+        {score: t12},
+        {score: t13}
       ];
       var team2 = [
-        {score: 22},
-        {score: 38},
-        {score: 60}
+        {score: t21},
+        {score: t22},
+        {score: t23}
       ];
 
       team1.unshift({score: 0}); // all games start with 0 points
@@ -61,12 +77,9 @@ define(function (require) {
       _.each(team1, function (team1, i) {
         var team1Score = team1.score;
         var team2Score = team2[i].score;
-        // console.log('team1Score, team2Score', team1Score, team2Score);
 
         if(team2Score > team1Score){
-          // console.log('team2[i] is bigger', team2[i]);
           team2[i].higher = true;
-          // console.log('team2[i]', team2[i]);
         } else {
           team1.higher = true;
         }
@@ -75,6 +88,7 @@ define(function (require) {
       var xAxisData = ['Start', '1st Half', '2nd Half', 'Total'];
       var margin = 20;
       var xaxisMargin = 30;
+      var aboveCricleMargin = 30;
       var width =  300 - margin - margin;
       var height = 150 - margin - margin;
 
@@ -83,7 +97,7 @@ define(function (require) {
                 .domain([0, d3.max(team1, function (t) {
                   return t.score;
                 })])
-                .range([0+xaxisMargin, height]);
+                .range([0+xaxisMargin, height-aboveCricleMargin]);
       var x = d3.scale.linear()
                 .domain([0, team1.length])
                 // don't know why I need to make the range extra big to get the

@@ -6,39 +6,39 @@
 <div class="header">
 	<div class="team1">
 		<div class="topLock">
-			<span class="seed">12</span>
-			<span class="name">Bluejays</span>
+			<span class="seed">{{ team1-seed }}</span>
+			<span class="name">{{ team1-name }}</span>
 		</div>
-		<h2 class="score">78</h2>
+		<h2 class="score">{{ team1-total-score }}</h2>
 	</div>
 
 	<div class="team2">
 		<div class="topLock">
-			<span class="seed">3</span>
-			<span class="name">Duke</span>
+			<span class="seed">{{ team2-seed }}</span>
+			<span class="name">{{ team2-name }}</span>
 		</div>
-		<h2 class="score">60</h2>
+		<h2 class="score">{{ team2-total-score }}</h2>
 	</div>
 </div>
 
 <div class="recap">
 	<h2 class="title">Recap</h2>
-	<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit modi minima exercitationem debitis. Error, provident, aut, tenetur suscipit eum ipsam quidem corporis a placeat sapiente cupiditate quasi perspiciatis labore natus.</p>
+	<p class="text">{{ match-summary }}</p>
 </div>
 
 <div class="chart"></div>
 
 <div class="notable">
 	<div class="badge-wrapper">
-		<div class="badge Blowout"></div>
+		<div class="badge {{ match-badge }}"></div>
 		<!-- <img src="/images/badges/Blowout.svg" alt=""> -->
 	</div>
 	<div class="badgeText">
-		<h2 class="title">Blowout</h2>
-		<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, soluta, fuga. Aliquam, optio ratione eum tempore modi impedit reprehenderit vero id fuga voluptas libero eveniet maxime laboriosam blanditiis amet voluptatem?</p>
+		<h2 class="title">{{ match-badge }}</h2>
+		<p class="text">{{ match-badge-summary }}</p>
 	</div>
 </div>
 
 <div class="continue">
-	<span class="text">Continue Reading ›</span>
+	<a class="text" href="{{ match-post-link }}">Continue Reading ›</a>
 </div>

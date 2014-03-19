@@ -7,6 +7,12 @@ define(function (require) {
 
 		template: _bracket,
 
+		dimState: false,
+
+		events: {
+			'click .spinner-wrapper': 'thisClicked'
+		},
+
 		initialize: function (options) {
 			this.render();
 
@@ -32,6 +38,21 @@ define(function (require) {
 
 		loaded: function () {
 			this.$el.removeClass('loading');
+		},
+
+		dim: function () {
+			this.dimState = true;
+			this.$el.addClass('dim');
+		},
+
+		undim: function(){
+			this.dimState = false;
+			this.$el.removeClass('dim');
+		},
+
+		thisClicked: function () {
+			this.trigger('bracket:clicked');
+			this.undim();
 		}
 
 	});

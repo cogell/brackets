@@ -37,6 +37,7 @@ header{
 	.fb-wrapper,
 	.twit-wrapper{
 		position: relative; // for the kids
+
 		width: 40%;
 		padding-bottom: 40%;
 	}
@@ -45,6 +46,8 @@ header{
 	.twitter {
 		position: absolute;
 		top:0;bottom:0;left:0;right:0;
+		max-width: 60px;
+		max-height: 60px;
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
@@ -53,4 +56,14 @@ header{
 
 	.facebook{ background-image: url('/images/twitter.svg'); }
 	.twitter{ background-image: url('/images/facebook.svg'); }
+}
+
+////////////////////////////////////////////////////////
+// MEDIA QUERIES //////////////////////////////////////
+//////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+@media all and (min-width: $full-width) {
+	header .title{
+		font-size: 3em;
+	}
 }

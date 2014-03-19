@@ -5,7 +5,7 @@
 	display: block;
 }
 
-@media all and (min-width: $full-bracket) {
+@media all and (min-width: $full-width) {
 	.landing,
 	.landing.active
 	{ display: none; }

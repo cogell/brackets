@@ -1,5 +1,4 @@
 header {
-
 	.map-wrapper {
 		display: none;
 		position: relative;
@@ -34,6 +33,12 @@ header {
 	.west .map{ background-image: url('/images/map/west.svg')}
 	.east .map{ background-image: url('/images/map/east.svg')}
 	.finals .map{ background-image: url('/images/map/finals.svg')}
+}
 
+////////////////////////////////////////////////////////
+// MEDIA QUERIES //////////////////////////////////////
+//////////////////////////////////////////////////////
 
+@media all and (min-width: $full-width) {
+	header .map{ display: none }
 }

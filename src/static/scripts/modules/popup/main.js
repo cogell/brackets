@@ -8,21 +8,24 @@ define(function (require) {
 		main: function ($root) {
 			this.setAPI();
 			this.view = new Popup({
-				model: new Backbone.Model()
+				model: new Backbone.Model(),
+				windowHeight: pubsub.windowHeight
 			});
 			$root.append( this.view.el );
 		},
 
 		matchClicked: function (match) {
-			// console.log('popup controller sees match clicked. match:', match);
-			// console.log('this.view.model', this.view.model);
 			this.view.model = match;
-			// console.log('this.view.model', this.view.model);
-			this.view.show();
+			this.view.render();
+		},
+
+		bracketClicked: function () {
+			this.view.hide();
 		},
 
 		setAPI: function () {
 			this.pubsub.on('match:clicked', this.matchClicked, this);
+			this.pubsub.on('bracket:clicked', this.bracketClicked, this);
 		}
 	};
 

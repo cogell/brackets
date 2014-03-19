@@ -1,7 +1,16 @@
 .popup{
 	display: none;
+
 	position: absolute;
-	top: 0; /*bottom:0;*/ left: 0; right: 0;
+	z-index: 99; // above bracket dim
+
+	// center this sucker
+	top: 0;
+	left: 50%;
+	@include transform(translate(-50%, 0));
+
+	width: 320px;
+	margin: 0 auto;
 
 	padding: $popup-padding;
 
@@ -10,9 +19,14 @@
 	padding-top: $popup-close-size; // for the close button
 
 	// margin: $popup-padding; // do at a larger screen
-	// border: $common-border; // do at a larger screen
+	border: 2px solid $black; // do at a larger screen
 }
 
 .popup.active{
 	display: block;
+}
+
+.popup.tall{
+	top: 50%;
+	@include transform(translate(-50%, -50%));
 }

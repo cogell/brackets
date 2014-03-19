@@ -6,7 +6,6 @@ $match-height: 50px;
 	height: $match-height;
 
 	background-color: $x-light-grey;
-	border-top: 2px solid $light-grey;
 
 	margin: 2px;
 
@@ -14,13 +13,23 @@ $match-height: 50px;
 	padding-left: 0; // remove defaults
 
 	text-align: left;
-	cursor: pointer;
+	// cursor: pointer;
 
-	@include transition(background-color, 0.3s, ease);
+	font-size: 1.1em;
 
-	&:hover{
-		background-color: $black;
-		color: white;
+	@include transition(all 0.5s ease);
+
+	&.final{
+		border-top: 2px solid $light-grey;
+		&:hover{
+			cursor: pointer;
+			background-color: $black;
+			color: white;
+			.team.winner,
+			.team.loser {
+				color: white;
+			}
+		}
 	}
 }
 
@@ -33,4 +42,15 @@ $match-height: 50px;
   // vertical-align: middle;
   .name{}
   .score{float: right;}
+}
+
+// WINNER STATE
+
+.match .team.winner {
+	font-weight: 700;
+	color: $black;
+}
+
+.match .team.loser {
+	color: $light-grey;
 }

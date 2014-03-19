@@ -390,6 +390,8 @@ body {
       bottom: 0;
       left: 0;
       right: 0;
+      max-width: 60px;
+      max-height: 60px;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -398,6 +400,9 @@ body {
       background-image: url('/images/twitter.svg'); }
     #huffpostcode-march-madness header .twitter {
       background-image: url('/images/facebook.svg'); }
+  @media all and (min-width: 900px) {
+    #huffpostcode-march-madness header .title {
+      font-size: 3em; } }
   #huffpostcode-march-madness header .map-wrapper {
     display: none;
     position: relative;
@@ -427,11 +432,14 @@ body {
     background-image: url('/images/map/east.svg'); }
   #huffpostcode-march-madness header .finals .map {
     background-image: url('/images/map/finals.svg'); }
+  @media all and (min-width: 900px) {
+    #huffpostcode-march-madness header .map {
+      display: none; } }
   #huffpostcode-march-madness .landing {
     display: none; }
   #huffpostcode-march-madness .landing.active {
     display: block; }
-  @media all and (min-width: 660px) {
+  @media all and (min-width: 900px) {
     #huffpostcode-march-madness .landing, #huffpostcode-march-madness .landing.active {
       display: none; } }
   #huffpostcode-march-madness .landing .top, #huffpostcode-march-madness .landing .bottom {
@@ -441,7 +449,10 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
+    #huffpostcode-march-madness .landing .region:hover span {
+      font-size: 2.6em; }
   #huffpostcode-march-madness .landing .midwest, #huffpostcode-march-madness .landing .south, #huffpostcode-march-madness .landing .west, #huffpostcode-march-madness .landing .east {
     display: inline-block;
     width: 49%;
@@ -471,25 +482,46 @@ body {
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    -webkit-transition: font-size, 0.2s ease;
+    -moz-transition: font-size, 0.2s ease;
+    transition: font-size, 0.2s ease; }
   #huffpostcode-march-madness .popup {
     display: none;
     position: absolute;
+    z-index: 99;
     top: 0;
-    /*bottom:0;*/
-    left: 0;
-    right: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    width: 320px;
+    margin: 0 auto;
     padding: 10px;
     background: white;
-    padding-top: 28px; }
+    padding-top: 28px;
+    border: 2px solid #333333; }
   #huffpostcode-march-madness .popup.active {
     display: block; }
+  #huffpostcode-march-madness .popup.tall {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
   #huffpostcode-march-madness .popup .close {
     position: absolute;
-    top: 0;
+    top: 1px;
     right: 0;
     font-size: 1.3em;
     cursor: pointer; }
+    #huffpostcode-march-madness .popup .close:hover .icon-close {
+      color: #333333; }
+    #huffpostcode-march-madness .popup .close:hover .icon-stop {
+      color: white; }
     #huffpostcode-march-madness .popup .close .icon-close {
       color: white;
       z-index: 9;
@@ -500,11 +532,17 @@ body {
       -moz-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       -o-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%);
+      -webkit-transition: color 0.2s ease;
+      -moz-transition: color 0.2s ease;
+      transition: color 0.2s ease; }
     #huffpostcode-march-madness .popup .close .icon-stop {
       color: #b2b2b2;
       font-size: 2em;
-      background-color: white; }
+      background-color: white;
+      -webkit-transition: color 0.2s ease;
+      -moz-transition: color 0.2s ease;
+      transition: color 0.2s ease; }
   #huffpostcode-march-madness .popup .header {
     overflow: auto;
     margin-bottom: 10px; }
@@ -627,16 +665,30 @@ body {
   #huffpostcode-march-madness .popup .badge.Trophy {
     background-image: url('/images/badges/Trophy.svg'); }
   #huffpostcode-march-madness .popup .continue {
-    color: white;
-    background-color: #b2b2b2;
+    display: none;
+    background-color: #e5e5e5;
     text-align: center;
     padding: 1.8em 0;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease; }
+    #huffpostcode-march-madness .popup .continue.active {
+      display: block; }
+    #huffpostcode-march-madness .popup .continue:hover {
+      background-color: #4c4c4c; }
+      #huffpostcode-march-madness .popup .continue:hover .text {
+        color: white; }
     #huffpostcode-march-madness .popup .continue .text {
       font-family: 'Roboto Slab', sans-serif;
       font-size: 1.3em;
       letter-spacing: 0.18em;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #333333;
+      -webkit-transition: color 0.2s ease;
+      -moz-transition: color 0.2s ease;
+      transition: color 0.2s ease; }
   #huffpostcode-march-madness #bracket {
     max-width: 900px;
     margin: 0 auto;
@@ -647,8 +699,13 @@ body {
     #huffpostcode-march-madness #bracket:after {
       clear: both; }
   #huffpostcode-march-madness #bracket .spinner-wrapper {
-    display: none;
-    position: relative; }
+    height: 0;
+    position: relative;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; }
+    #huffpostcode-march-madness #bracket .spinner-wrapper .spinner {
+      display: none; }
   #huffpostcode-march-madness #bracket.loading .spinner-wrapper {
     display: block;
     position: absolute;
@@ -671,91 +728,169 @@ body {
       -webkit-animation: animRotate, 2s, infinite, linear;
       -moz-animation: animRotate, 2s, infinite, linear;
       animation: animRotate, 2s, infinite, linear; }
-  #huffpostcode-march-madness #bracket .region {
-    display: none;
-    width: 320px;
-    height: 480px;
-    margin: 0 auto; }
-  #huffpostcode-march-madness #bracket .region.active {
-    display: block; }
-  #huffpostcode-march-madness #bracket .round {
-    width: 31%; }
-    #huffpostcode-march-madness #bracket .round .title {
+  #huffpostcode-march-madness #bracket.dim .spinner-wrapper {
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.5);
+    z-index: 9;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; }
+    #huffpostcode-march-madness #bracket.dim .spinner-wrapper .spinner {
       display: none; }
-  #huffpostcode-march-madness #bracket .south .round, #huffpostcode-march-madness #bracket .east .round {
-    float: left;
-    margin-right: 10px; }
-    #huffpostcode-march-madness #bracket .south .round.round4, #huffpostcode-march-madness #bracket .east .round.round4 {
-      margin-left: -50px; }
-    #huffpostcode-march-madness #bracket .south .round.round5, #huffpostcode-march-madness #bracket .east .round.round5 {
-      margin-left: -70px; }
-  #huffpostcode-march-madness #bracket .west .round, #huffpostcode-march-madness #bracket .midwest .round {
-    float: right;
-    margin-left: 10px; }
-    #huffpostcode-march-madness #bracket .west .round.round4, #huffpostcode-march-madness #bracket .midwest .round.round4 {
-      margin-right: -50px; }
-    #huffpostcode-march-madness #bracket .west .round.round5, #huffpostcode-march-madness #bracket .midwest .round.round5 {
-      margin-right: -70px; }
-  #huffpostcode-march-madness #bracket .round2 {
-    margin-top: 2%; }
-  #huffpostcode-march-madness #bracket .round2 .match {
-    margin-bottom: 8%; }
-  #huffpostcode-march-madness #bracket .round3 {
-    margin-top: 10%; }
-  #huffpostcode-march-madness #bracket .round3 .match {
-    margin-bottom: 67%; }
-  #huffpostcode-march-madness #bracket .round4 {
-    margin-top: 28%; }
-  #huffpostcode-march-madness #bracket .round4 .match {
-    margin-bottom: 184%; }
-  #huffpostcode-march-madness #bracket .round5 {
-    margin-top: 66%; }
-  #huffpostcode-march-madness #bracket .round6, #huffpostcode-march-madness #bracket .round7 {
-    display: none; }
-  #huffpostcode-march-madness #bracket .finals .round2, #huffpostcode-march-madness #bracket .finals .round3, #huffpostcode-march-madness #bracket .finals .round4, #huffpostcode-march-madness #bracket .finals .round5 {
-    display: none; }
-  #huffpostcode-march-madness #bracket .finals .round6, #huffpostcode-march-madness #bracket .finals .round7 {
-    display: block; }
-  #huffpostcode-march-madness #bracket .finals .round6 {
-    width: 100%;
-    margin-top: 50px;
-    *zoom: 1; }
-    #huffpostcode-march-madness #bracket .finals .round6:before, #huffpostcode-march-madness #bracket .finals .round6:after {
-      content: " ";
-      display: table; }
-    #huffpostcode-march-madness #bracket .finals .round6:after {
-      clear: both; }
-    #huffpostcode-march-madness #bracket .finals .round6 .match:nth-child(1) {
-      float: left; }
-    #huffpostcode-march-madness #bracket .finals .round6 .match:nth-child(2) {
-      float: right; }
-  #huffpostcode-march-madness #bracket .finals .round7 {
-    width: 100%; }
-    #huffpostcode-march-madness #bracket .finals .round7 .match {
-      margin: 0 auto; }
-  @media all and (min-width: 660px) {
+  #huffpostcode-march-madness #bracket {
+    position: relative; }
     #huffpostcode-march-madness #bracket .region {
+      display: none;
+      width: 320px;
+      height: 480px;
+      margin: 0 auto; }
+    #huffpostcode-march-madness #bracket .region.active {
+      display: block; }
+    #huffpostcode-march-madness #bracket .round {
+      width: 100px; }
+      #huffpostcode-march-madness #bracket .round .title {
+        display: none; }
+    #huffpostcode-march-madness #bracket .south .round, #huffpostcode-march-madness #bracket .east .round {
+      float: left;
+      margin-right: 10px; }
+      #huffpostcode-march-madness #bracket .south .round.round4, #huffpostcode-march-madness #bracket .east .round.round4 {
+        margin-left: -50px; }
+      #huffpostcode-march-madness #bracket .south .round.round5, #huffpostcode-march-madness #bracket .east .round.round5 {
+        margin-left: -70px; }
+    #huffpostcode-march-madness #bracket .west .round, #huffpostcode-march-madness #bracket .midwest .round {
+      float: right;
+      margin-left: 10px; }
+      #huffpostcode-march-madness #bracket .west .round.round2, #huffpostcode-march-madness #bracket .midwest .round.round2 {
+        margin-right: 5px; }
+      #huffpostcode-march-madness #bracket .west .round.round4, #huffpostcode-march-madness #bracket .midwest .round.round4 {
+        margin-right: -50px; }
+      #huffpostcode-march-madness #bracket .west .round.round5, #huffpostcode-march-madness #bracket .midwest .round.round5 {
+        margin-right: -80px; }
+    #huffpostcode-march-madness #bracket .round2 {
+      margin-top: 2%; }
+    #huffpostcode-march-madness #bracket .round2 .match {
+      margin-bottom: 8%; }
+    #huffpostcode-march-madness #bracket .round3 {
+      margin-top: 10%; }
+    #huffpostcode-march-madness #bracket .round3 .match {
+      margin-bottom: 67%; }
+    #huffpostcode-march-madness #bracket .round4 {
+      margin-top: 28%; }
+    #huffpostcode-march-madness #bracket .round4 .match {
+      margin-bottom: 184%; }
+    #huffpostcode-march-madness #bracket .round5 {
+      margin-top: 64%; }
+    #huffpostcode-march-madness #bracket .round6, #huffpostcode-march-madness #bracket .round7 {
+      display: none; }
+    #huffpostcode-march-madness #bracket .finals .round2, #huffpostcode-march-madness #bracket .finals .round3, #huffpostcode-march-madness #bracket .finals .round4, #huffpostcode-march-madness #bracket .finals .round5 {
+      display: none; }
+    #huffpostcode-march-madness #bracket .finals .round6, #huffpostcode-march-madness #bracket .finals .round7 {
+      display: block; }
+    #huffpostcode-march-madness #bracket .finals .round6 {
+      width: 100%;
+      margin-top: 50px;
+      *zoom: 1; }
+      #huffpostcode-march-madness #bracket .finals .round6:before, #huffpostcode-march-madness #bracket .finals .round6:after {
+        content: " ";
+        display: table; }
+      #huffpostcode-march-madness #bracket .finals .round6:after {
+        clear: both; }
+      #huffpostcode-march-madness #bracket .finals .round6 .match:nth-child(1) {
+        float: left; }
+      #huffpostcode-march-madness #bracket .finals .round6 .match:nth-child(2) {
+        float: right; }
+    #huffpostcode-march-madness #bracket .finals .round7 {
+      width: 100%; }
+      #huffpostcode-march-madness #bracket .finals .round7 .match {
+        margin: 10px auto; }
+  @media all and (min-width: 450px) {
+    #huffpostcode-march-madness #bracket .region {
+      width: 450px; }
+      #huffpostcode-march-madness #bracket .region .title {
+        display: block;
+        color: #b2b2b2;
+        font-family: 'Roboto Slab', sans-serif;
+        font-weight: 400;
+        margin: 0 5px; }
+    #huffpostcode-march-madness #bracket .finals .title {
+      text-align: center; }
+    #huffpostcode-march-madness #bracket .south .round.round2, #huffpostcode-march-madness #bracket .east .round.round2 {
+      margin-left: 8px; }
+    #huffpostcode-march-madness #bracket .south .round.round4, #huffpostcode-march-madness #bracket .east .round.round4 {
+      margin-left: 0; }
+    #huffpostcode-march-madness #bracket .south .round.round5, #huffpostcode-march-madness #bracket .east .round.round5 {
+      margin-left: 0; }
+    #huffpostcode-march-madness #bracket .west .round.round2, #huffpostcode-march-madness #bracket .midwest .round.round2 {
+      margin-right: 8px; }
+    #huffpostcode-march-madness #bracket .west .round.round4, #huffpostcode-march-madness #bracket .midwest .round.round4 {
+      margin-right: 0; }
+    #huffpostcode-march-madness #bracket .west .round.round5, #huffpostcode-march-madness #bracket .midwest .round.round5 {
+      margin-right: 0; }
+    #huffpostcode-march-madness #bracket .round2 {
+      margin-top: 8px; }
+    #huffpostcode-march-madness #bracket .round2 .match {
+      margin-bottom: 8%; }
+    #huffpostcode-march-madness #bracket .round3 {
+      margin-top: 40px; }
+    #huffpostcode-march-madness #bracket .round3 .match {
+      margin-bottom: 66px; }
+    #huffpostcode-march-madness #bracket .round4 {
+      margin-top: 98px; }
+    #huffpostcode-march-madness #bracket .round4 .match {
+      margin-bottom: 184%; }
+    #huffpostcode-march-madness #bracket .round5 {
+      margin-top: 210px; }
+    #huffpostcode-march-madness #bracket .round6, #huffpostcode-march-madness #bracket .round7 {
+      display: none; } }
+  @media all and (min-width: 900px) {
+    #huffpostcode-march-madness #bracket .region {
+      float: left;
       display: block;
-      float: left; } }
+      margin-bottom: 20px; }
+      #huffpostcode-march-madness #bracket .region.finals {
+        width: 320px; }
+      #huffpostcode-march-madness #bracket .region.west {
+        float: right; }
+      #huffpostcode-march-madness #bracket .region.midwest {
+        float: right; }
+      #huffpostcode-march-madness #bracket .region.finals {
+        position: absolute;
+        top: 408px;
+        left: 290px; } }
   #huffpostcode-march-madness .match {
     width: 100px;
     height: 50px;
     background-color: #e5e5e5;
-    border-top: 2px solid #b2b2b2;
     margin: 2px;
     list-style-type: none;
     padding-left: 0;
     text-align: left;
-    cursor: pointer;
-    -webkit-transition: background-color, 0.3s, ease;
-    -moz-transition: background-color, 0.3s, ease;
-    transition: background-color, 0.3s, ease; }
-    #huffpostcode-march-madness .match:hover {
-      background-color: #333333;
-      color: white; }
+    font-size: 1.1em;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    #huffpostcode-march-madness .match.final {
+      border-top: 2px solid #b2b2b2; }
+      #huffpostcode-march-madness .match.final:hover {
+        cursor: pointer;
+        background-color: #333333;
+        color: white; }
+        #huffpostcode-march-madness .match.final:hover .team.winner, #huffpostcode-march-madness .match.final:hover .team.loser {
+          color: white; }
   #huffpostcode-march-madness .match .team {
     width: 100px;
     height: 25px;
     padding: 3px; }
     #huffpostcode-march-madness .match .team .score {
       float: right; }
+  #huffpostcode-march-madness .match .team.winner {
+    font-weight: 700;
+    color: #333333; }
+  #huffpostcode-march-madness .match .team.loser {
+    color: #b2b2b2; }

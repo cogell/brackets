@@ -7,8 +7,12 @@
 
 // LOADING
 #bracket .spinner-wrapper{
-	display: none;
+	height: 0;
 	position: relative;
+	@include transition(background-color 0.3s ease);
+	.spinner {
+		display: none;
+	}
 }
 
 #bracket.loading .spinner-wrapper{
@@ -27,4 +31,16 @@
 		@include animation(animRotate, 2s, infinite, linear);
 
 	}
+}
+
+// DIM
+#bracket.dim .spinner-wrapper{
+	height: auto;
+	display: block;
+	position: absolute;
+	top:0;bottom:0;left:0;right:0;
+	background-color: rgba($black, 0.5);
+	z-index: 9;
+	@include transition(background-color 0.3s ease);
+	.spinner{ display: none; }
 }

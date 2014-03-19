@@ -8,7 +8,6 @@ define(function (require) {
 		main: function ($root) {
 			this.setAPI();
 			this.initView($root);
-			console.log('this.pubsub', this.pubsub);
 		},
 
 		initView: function ($root) {
@@ -36,9 +35,16 @@ define(function (require) {
 			this.setMap(text);
 		},
 
+		windowResized: function () {
+			if(this.pubsub.windowWidth >= 900){
+				this.setHeader('NCAA 2014 Tournament');
+			}
+		},
+
 		setAPI: function () {
 			this.pubsub.on( 'setHeader', this.setHeader, this );
 			this.pubsub.on( 'region:clicked', this.regionClicked, this);
+			this.pubsub.on( 'window:resized', this.windowResized, this);
 		}
 	};
 
