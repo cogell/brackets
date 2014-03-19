@@ -14,25 +14,31 @@ define(function (require) {
 		main: function ($root) {
 
 			this.$root = $root;
-
-			this.pubsub.trigger('bracket:loading');
-
 			this.setAPI();
 			this.createRegionCollections();
 			this.createViews();
-			this.initTabletop();
 
+			this.pubsub.trigger('bracket:loading');
+			this.fetchData();
 			this.pubsub.trigger('bracket:loaded');
-
-			// add functionality to region-view to render a match view
-			// for each model, will need to parse into different divs
-			// based on their round
 		},
 
 		setAPI: function () {
 			this.pubsub.on('region:clicked', this.regionClicked, this);
 			this.pubsub.on('map:clicked', this.mapClicked, this);
+
+			this.pubsub.on('bracket:loading', this.bracketLoading, this);
+			this.pubsub.on('bracket:loaded', this.bracketLoaded, this);
 		},
+
+		bracketLoading: function () {
+			this.bracket.loading();
+		},
+
+		bracketLoaded: function () {
+			this.bracket.loaded();
+		},
+
 		mapClicked: function(){
 			this.midwestView.hide();
 			this.southView.hide();
@@ -107,22 +113,31 @@ define(function (require) {
 
 		/////////////////////////////////
 		/////////////////// DATA FETCHING
-		initTabletop: function () {
+		fetchData: function () {
 			var _this = this;
-			this.tabletop = Tabletop.init({
-				key: '0AoFVfb01eGFHdEhXR0MwTFdtWXI5WGE3UUMyZFI0Y0E',
-				callback: function () {
-					_this.dataHandler(_this);
+			$.ajax({
+				type:'GET',
+				crossDomain: true,
+				url: '//labs-march-psychopathy.s3.amazonaws.com/bracket.json',
+				// contentType: 'application/json',
+				// dataType: 'jsonp',
+				// jsonpCallback: 'content1234',
+				success: function (data) {
+					console.log('data', data);
+					_this.dataHandler(data);
 				},
-				simpleSheet: true
+				error: function (err) {
+					console.log('error', err);
+				}
 			});
 		},
 
-		dataHandler: function () {
+		dataHandler: function (data) {
 			var _this = this;
-			_.each(_this.tabletop.sheets(), function ( sheet ) {
+			_.each(data, function ( sheet, key ) {
+				console.log('sheet, key', sheet, key);
 				// console.log('sheet ' + sheet.name.toString() + ' about to be added' );
-				_this[sheet.name.toString()] = _this.createMatchesArray( sheet.name, sheet.elements, _this );
+				_this[key.toString()] = _this.createMatchesArray( key, sheet.row, _this );
 			});
 		},
 
@@ -166,6 +181,7 @@ define(function (require) {
 					if(matchModel.get('region') == 'null'){
 						_this.finalsCollection.add(matchModel);
 					}
+					console.log('_this.finalsCollection.length', _this.finalsCollection.length);
 
 				}); // end of the each
 			}

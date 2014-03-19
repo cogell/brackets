@@ -1,0 +1,30 @@
+#bracket {
+	max-width: 900px;
+	margin: 0 auto;
+
+	@include clearfix;
+}
+
+// LOADING
+#bracket .spinner-wrapper{
+	display: none;
+	position: relative;
+}
+
+#bracket.loading .spinner-wrapper{
+	display: block;
+	position: absolute;
+	top:0;bottom:0;left:0;right:0;
+	background-color: $x-light-grey;
+	.spinner {
+		position: absolute;
+		top: 50%; left: 50%;
+		@include transform(translate(-50%, -50%));
+
+		font-size: 8em;
+		color: $light-grey;
+
+		@include animation(animRotate, 2s, infinite, linear);
+
+	}
+}

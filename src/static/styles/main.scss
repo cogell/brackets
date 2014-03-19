@@ -3,9 +3,13 @@ body{
 	margin: 0;
 }
 
+@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import 'icons'; // includes @font-face
+@import 'animation'; // includes @keyframes
 
 #huffpostcode-march-madness{
+	max-width: 900px;
+	margin: 0 auto;
 
 	/* apply a natural box layout model to all elements */
 	*, *:before, *:after {
@@ -13,11 +17,11 @@ body{
 		box-sizing: border-box;
 	}
 
-	@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
 	@import '../../bower_components/normalize-css/normalize';
 
 	@import 'colors';
 	@import 'measurements';
+	@import 'breakpoints';
 	@import 'type';
 
 	@import 'header/header';
@@ -34,7 +38,8 @@ body{
 	@import 'popup/badge';
 	@import 'popup/continue';
 
-	@import 'bracket/region/region';
-	@import 'bracket/region/match';
+	@import 'bracket/bracket';
+	@import 'bracket/region';
+	@import 'bracket/match';
 
 }

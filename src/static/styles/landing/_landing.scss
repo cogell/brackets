@@ -4,3 +4,9 @@
 .landing.active{
 	display: block;
 }
+
+@media all and (min-width: $full-bracket) {
+	.landing,
+	.landing.active
+	{ display: none; }
+}

@@ -24,6 +24,14 @@ define(function (require) {
 			this.$el.find('#west').append(this.westView.el);
 			this.$el.find('#east').append(this.eastView.el);
 			this.$el.find('#finals').append(this.finalsView.el);
+		},
+
+		loading: function () {
+			this.$el.addClass('loading');
+		},
+
+		loaded: function () {
+			this.$el.removeClass('loading');
 		}
 
 	});

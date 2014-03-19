@@ -3,9 +3,7 @@ header{
 	border-bottom: 1px solid $grey;
 	padding: $medium-padding;
 
-	// overflow: auto;
-	height: 50px;
-
+	@include clearfix;
 
 	.title-wrapper {
 		position: relative;

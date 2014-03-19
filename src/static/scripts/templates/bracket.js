@@ -6,7 +6,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div id=\"midwest\"></div>\n<div id=\"south\"></div>\n<div id=\"west\"></div>\n<div id=\"east\"></div>\n<div id=\"finals\"></div>";
+  return "<div class=\"spinner-wrapper\">\n	<div class=\"spinner icon-spinner\"></div>\n</div>\n<div id=\"south\"></div>\n<div id=\"west\"></div>\n<div id=\"east\"></div>\n<div id=\"midwest\"></div>\n<div id=\"finals\"></div>";
   });
 
 });
