@@ -6,7 +6,8 @@ define(function (require) {
 		tagName: 'header',
 		template: _header,
 		events: {
-			'click .map': 'mapClicked',
+			'click .back': 'backClicked',
+			// 'click .map': 'mapClicked',
 			'click .facebook': 'fbClicked',
 			'click .twitter': 'twitClicked'
 		},
@@ -22,20 +23,26 @@ define(function (require) {
 		},
 
 		setMap: function (text) {
+			this.$el.find('.back').attr('class', 'back ' + text);
 			this.$el.find('.map-wrapper').attr('class', 'map-wrapper ' + text);
 		},
 
 		mapClicked: function () {
+			this.closeRegion();
+		},
+
+		backClicked: function () {
 			this.trigger('map:clicked');
 			this.setHeader('NCAA 2014 Tournament');
+			this.$el.find('.back').attr('class', 'back');
 			this.$el.find('.map-wrapper').attr('class', 'map-wrapper');
 		},
 
 		twitClicked: function () {
 			var baseUrl = 'https://twitter.com/share?';
 			var url = '&url=' + encodeURIComponent(window.location.href);
-			var text = '&text=' + encodeURIComponent('some text');
-			var hashtags = '&hashtags=' + 'ncaa,marchMadness';
+			var text = '&text=' + encodeURIComponent('Get NCAA tournament scores and recaps with the @HuffPostSports interactive bracket.');
+			var hashtags = '&hashtags=' + 'NCAATournament,MarchMadness';
 			var twitterURL = baseUrl + url + text + hashtags;
       window.open(twitterURL, 'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=300,height=300');
 		},
@@ -46,8 +53,7 @@ define(function (require) {
         name: 'NCAA 2014 Tournament',
         picture: 'http://labs-march-psychopathy.s3-website-us-west-2.amazonaws.com/images/social.png',
         link: window.location.href,
-        caption: 'caption text',
-        description: 'description text',
+        description: 'Get NCAA tournament scores and recaps with the HuffPost Sports interactive bracket'
       },
       function(response) {
         if (response && response.post_id) {

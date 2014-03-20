@@ -1,0 +1,37 @@
+// header .back{
+// 	display: none;
+// 	position: relative;
+// 	float: right;
+// 	font-size: 18px;
+// 	margin-left: 5px;
+
+// 	// width: 20%;
+// 	// padding-bottom: 20%;
+// 	max-width: 60px;
+// 	max-height: 60px;
+
+// 	background-image: url('/images/close.svg');
+// 	background-repeat: no-repeat;
+// 	background-size: cover;
+
+// 	cursor: pointer; // handle click with javascript
+// 	&:hover {
+// 		color: $black;
+// 	}
+// }
+
+// // ACTIVE STATE
+// header .back.midwest,
+// header .back.south,
+// header .back.west,
+// header .back.east,
+// header .back.finals {
+// 	display: block;
+// }
+
+// ////////////////////////////////////////////////////////
+// // MEDIA QUERIES //////////////////////////////////////
+
+// // @media all and (min-width: $full-width) {
+// // 	header .back{ display: none }
+// // }

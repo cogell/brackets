@@ -13,11 +13,26 @@
 	.region-title {
 		display: none;
 		position: absolute;
-		text-transform: capitalize;
+		text-transform: uppercase;
 		font-family: $slab;
 		font-size: 22px;
-		color: $x-light-grey;
+		color: $grey;
 		margin: 0;
+	}
+
+	.close{
+		position: absolute;
+		font-size: 2.7em;
+		cursor: pointer; // handle click with javascript
+		@include clearfix;
+		&:hover {
+			.icon-close { color: $black }
+		}
+		.icon-close {
+			color: $light-grey;
+			z-index: 9; // above close
+			@include transition(color 0.2s ease);
+		}
 	}
 
 	.region.active{ display: block; }
@@ -30,6 +45,10 @@
 
 	.south,
 	.east {
+		.close {
+			right: -7px;
+			top: 10px;
+		}
 		.round {
 			float: left;
 			margin-right: 10px;
@@ -40,6 +59,10 @@
 
 	.west,
 	.midwest {
+		.close {
+			right: -7px;
+			top: 10px;
+		}
 		.round {
 			float: right;
 			margin-left: 10px;
@@ -125,7 +148,7 @@
 
 			.region-title {
 				display: block;
-				top: 243px;
+				top: 252px;
 			}
 
 			.round-title,
@@ -145,7 +168,7 @@
 		.south,
 		.east {
 			background-position: 20px -28px;
-			.region-title {left: 254px;}
+			.region-title {left: 231px;}
 			.round {
 				&.round2{margin-left: 8px;}
 				&.round4{margin-left: 0;}
@@ -166,8 +189,8 @@
 
 		.finals{
 			.region-title {
-				top: 32px;
-				left: 190px;
+				top: 42px;
+				left: 184px;
 			}
 		}
 
@@ -206,8 +229,9 @@
 			width: 320px;
 			.region-title{
 				top: 94px;
-				left: 128px;
+				left: 118px;
 			}
+			.round7 .round-title{margin-top: 10px;}
 		}
 
 		&.west {float: right }
