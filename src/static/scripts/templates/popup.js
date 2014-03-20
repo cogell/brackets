@@ -6,7 +6,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
 
 
-  buffer += "<div class=\"close\">\n	<span class=\"ic icon-stop\"></span>\n	<span class=\"ic icon-close\"></span>\n</div>\n\n<div class=\"header\">\n	<div class=\"team1\">\n		<div class=\"topLock\">\n			<span class=\"seed\">";
+  buffer += "<div class=\"close\">\n	<span class=\"ic icon-stop\"></span>\n	<span class=\"ic icon-close\"></span>\n</div>\n\n<div class=\"hpc-header\">\n	<div class=\"team1\">\n		<div class=\"topLock\">\n			<span class=\"seed\">";
   if (stack1 = helpers['team1-seed']) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0['team1-seed']); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)

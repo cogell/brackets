@@ -7,9 +7,12 @@ body{
 @import 'icons'; // includes @font-face
 @import 'animation'; // includes @keyframes
 
-#huffpostcode-march-madness{
+#huffpostcode-march-madness.dont.touch.my.styles{
+	position: relative; // for the kids
 	max-width: 900px;
 	margin: 0 auto;
+	@include clearfix;
+	font-size: 10px;
 
 	/* apply a natural box layout model to all elements */
 	*, *:before, *:after {

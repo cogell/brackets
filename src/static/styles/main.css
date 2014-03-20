@@ -57,9 +57,12 @@ body {
   100% {
     transform: rotate(360deg); } }
 
-#huffpostcode-march-madness {
+#huffpostcode-march-madness.dont.touch.my.styles {
+  position: relative;
   max-width: 900px;
   margin: 0 auto;
+  *zoom: 1;
+  font-size: 10px;
   /* apply a natural box layout model to all elements */
   /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
   /**
@@ -220,149 +223,154 @@ body {
   /**
  * Remove most spacing between table cells.
  */ }
-  #huffpostcode-march-madness *, #huffpostcode-march-madness *:before, #huffpostcode-march-madness *:after {
+  #huffpostcode-march-madness.dont.touch.my.styles:before, #huffpostcode-march-madness.dont.touch.my.styles:after {
+    content: " ";
+    display: table; }
+  #huffpostcode-march-madness.dont.touch.my.styles:after {
+    clear: both; }
+  #huffpostcode-march-madness.dont.touch.my.styles *, #huffpostcode-march-madness.dont.touch.my.styles *:before, #huffpostcode-march-madness.dont.touch.my.styles *:after {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-  #huffpostcode-march-madness html {
+  #huffpostcode-march-madness.dont.touch.my.styles html {
     font-family: sans-serif;
     /* 1 */
     -ms-text-size-adjust: 100%;
     /* 2 */
     -webkit-text-size-adjust: 100%;
     /* 2 */ }
-  #huffpostcode-march-madness body {
+  #huffpostcode-march-madness.dont.touch.my.styles body {
     margin: 0; }
-  #huffpostcode-march-madness article, #huffpostcode-march-madness aside, #huffpostcode-march-madness details, #huffpostcode-march-madness figcaption, #huffpostcode-march-madness figure, #huffpostcode-march-madness footer, #huffpostcode-march-madness header, #huffpostcode-march-madness hgroup, #huffpostcode-march-madness main, #huffpostcode-march-madness nav, #huffpostcode-march-madness section, #huffpostcode-march-madness summary {
+  #huffpostcode-march-madness.dont.touch.my.styles article, #huffpostcode-march-madness.dont.touch.my.styles aside, #huffpostcode-march-madness.dont.touch.my.styles details, #huffpostcode-march-madness.dont.touch.my.styles figcaption, #huffpostcode-march-madness.dont.touch.my.styles figure, #huffpostcode-march-madness.dont.touch.my.styles footer, #huffpostcode-march-madness.dont.touch.my.styles header, #huffpostcode-march-madness.dont.touch.my.styles hgroup, #huffpostcode-march-madness.dont.touch.my.styles main, #huffpostcode-march-madness.dont.touch.my.styles nav, #huffpostcode-march-madness.dont.touch.my.styles section, #huffpostcode-march-madness.dont.touch.my.styles summary {
     display: block; }
-  #huffpostcode-march-madness audio, #huffpostcode-march-madness canvas, #huffpostcode-march-madness progress, #huffpostcode-march-madness video {
+  #huffpostcode-march-madness.dont.touch.my.styles audio, #huffpostcode-march-madness.dont.touch.my.styles canvas, #huffpostcode-march-madness.dont.touch.my.styles progress, #huffpostcode-march-madness.dont.touch.my.styles video {
     display: inline-block;
     /* 1 */
     vertical-align: baseline;
     /* 2 */ }
-  #huffpostcode-march-madness audio:not([controls]) {
+  #huffpostcode-march-madness.dont.touch.my.styles audio:not([controls]) {
     display: none;
     height: 0; }
-  #huffpostcode-march-madness [hidden], #huffpostcode-march-madness template {
+  #huffpostcode-march-madness.dont.touch.my.styles [hidden], #huffpostcode-march-madness.dont.touch.my.styles template {
     display: none; }
-  #huffpostcode-march-madness a {
+  #huffpostcode-march-madness.dont.touch.my.styles a {
     background: transparent; }
-  #huffpostcode-march-madness a:active, #huffpostcode-march-madness a:hover {
+  #huffpostcode-march-madness.dont.touch.my.styles a:active, #huffpostcode-march-madness.dont.touch.my.styles a:hover {
     outline: 0; }
-  #huffpostcode-march-madness abbr[title] {
+  #huffpostcode-march-madness.dont.touch.my.styles abbr[title] {
     border-bottom: 1px dotted; }
-  #huffpostcode-march-madness b, #huffpostcode-march-madness strong {
+  #huffpostcode-march-madness.dont.touch.my.styles b, #huffpostcode-march-madness.dont.touch.my.styles strong {
     font-weight: bold; }
-  #huffpostcode-march-madness dfn {
+  #huffpostcode-march-madness.dont.touch.my.styles dfn {
     font-style: italic; }
-  #huffpostcode-march-madness h1 {
+  #huffpostcode-march-madness.dont.touch.my.styles h1 {
     font-size: 2em;
     margin: 0.67em 0; }
-  #huffpostcode-march-madness mark {
+  #huffpostcode-march-madness.dont.touch.my.styles mark {
     background: #ff0;
     color: #000; }
-  #huffpostcode-march-madness small {
+  #huffpostcode-march-madness.dont.touch.my.styles small {
     font-size: 80%; }
-  #huffpostcode-march-madness sub, #huffpostcode-march-madness sup {
+  #huffpostcode-march-madness.dont.touch.my.styles sub, #huffpostcode-march-madness.dont.touch.my.styles sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
     vertical-align: baseline; }
-  #huffpostcode-march-madness sup {
+  #huffpostcode-march-madness.dont.touch.my.styles sup {
     top: -0.5em; }
-  #huffpostcode-march-madness sub {
+  #huffpostcode-march-madness.dont.touch.my.styles sub {
     bottom: -0.25em; }
-  #huffpostcode-march-madness img {
+  #huffpostcode-march-madness.dont.touch.my.styles img {
     border: 0; }
-  #huffpostcode-march-madness svg:not(:root) {
+  #huffpostcode-march-madness.dont.touch.my.styles svg:not(:root) {
     overflow: hidden; }
-  #huffpostcode-march-madness figure {
+  #huffpostcode-march-madness.dont.touch.my.styles figure {
     margin: 1em 40px; }
-  #huffpostcode-march-madness hr {
+  #huffpostcode-march-madness.dont.touch.my.styles hr {
     -moz-box-sizing: content-box;
     box-sizing: content-box;
     height: 0; }
-  #huffpostcode-march-madness pre {
+  #huffpostcode-march-madness.dont.touch.my.styles pre {
     overflow: auto; }
-  #huffpostcode-march-madness code, #huffpostcode-march-madness kbd, #huffpostcode-march-madness pre, #huffpostcode-march-madness samp {
+  #huffpostcode-march-madness.dont.touch.my.styles code, #huffpostcode-march-madness.dont.touch.my.styles kbd, #huffpostcode-march-madness.dont.touch.my.styles pre, #huffpostcode-march-madness.dont.touch.my.styles samp {
     font-family: monospace, monospace;
     font-size: 1em; }
-  #huffpostcode-march-madness button, #huffpostcode-march-madness input, #huffpostcode-march-madness optgroup, #huffpostcode-march-madness select, #huffpostcode-march-madness textarea {
+  #huffpostcode-march-madness.dont.touch.my.styles button, #huffpostcode-march-madness.dont.touch.my.styles input, #huffpostcode-march-madness.dont.touch.my.styles optgroup, #huffpostcode-march-madness.dont.touch.my.styles select, #huffpostcode-march-madness.dont.touch.my.styles textarea {
     color: inherit;
     /* 1 */
     font: inherit;
     /* 2 */
     margin: 0;
     /* 3 */ }
-  #huffpostcode-march-madness button {
+  #huffpostcode-march-madness.dont.touch.my.styles button {
     overflow: visible; }
-  #huffpostcode-march-madness button, #huffpostcode-march-madness select {
+  #huffpostcode-march-madness.dont.touch.my.styles button, #huffpostcode-march-madness.dont.touch.my.styles select {
     text-transform: none; }
-  #huffpostcode-march-madness button, #huffpostcode-march-madness html input[type="button"], #huffpostcode-march-madness input[type="reset"], #huffpostcode-march-madness input[type="submit"] {
+  #huffpostcode-march-madness.dont.touch.my.styles button, #huffpostcode-march-madness.dont.touch.my.styles html input[type="button"], #huffpostcode-march-madness.dont.touch.my.styles input[type="reset"], #huffpostcode-march-madness.dont.touch.my.styles input[type="submit"] {
     -webkit-appearance: button;
     /* 2 */
     cursor: pointer;
     /* 3 */ }
-  #huffpostcode-march-madness button[disabled], #huffpostcode-march-madness html input[disabled] {
+  #huffpostcode-march-madness.dont.touch.my.styles button[disabled], #huffpostcode-march-madness.dont.touch.my.styles html input[disabled] {
     cursor: default; }
-  #huffpostcode-march-madness button::-moz-focus-inner, #huffpostcode-march-madness input::-moz-focus-inner {
+  #huffpostcode-march-madness.dont.touch.my.styles button::-moz-focus-inner, #huffpostcode-march-madness.dont.touch.my.styles input::-moz-focus-inner {
     border: 0;
     padding: 0; }
-  #huffpostcode-march-madness input {
+  #huffpostcode-march-madness.dont.touch.my.styles input {
     line-height: normal; }
-  #huffpostcode-march-madness input[type="checkbox"], #huffpostcode-march-madness input[type="radio"] {
+  #huffpostcode-march-madness.dont.touch.my.styles input[type="checkbox"], #huffpostcode-march-madness.dont.touch.my.styles input[type="radio"] {
     box-sizing: border-box;
     /* 1 */
     padding: 0;
     /* 2 */ }
-  #huffpostcode-march-madness input[type="number"]::-webkit-inner-spin-button, #huffpostcode-march-madness input[type="number"]::-webkit-outer-spin-button {
+  #huffpostcode-march-madness.dont.touch.my.styles input[type="number"]::-webkit-inner-spin-button, #huffpostcode-march-madness.dont.touch.my.styles input[type="number"]::-webkit-outer-spin-button {
     height: auto; }
-  #huffpostcode-march-madness input[type="search"] {
+  #huffpostcode-march-madness.dont.touch.my.styles input[type="search"] {
     -webkit-appearance: textfield;
     /* 1 */
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     /* 2 */
     box-sizing: content-box; }
-  #huffpostcode-march-madness input[type="search"]::-webkit-search-cancel-button, #huffpostcode-march-madness input[type="search"]::-webkit-search-decoration {
+  #huffpostcode-march-madness.dont.touch.my.styles input[type="search"]::-webkit-search-cancel-button, #huffpostcode-march-madness.dont.touch.my.styles input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none; }
-  #huffpostcode-march-madness fieldset {
+  #huffpostcode-march-madness.dont.touch.my.styles fieldset {
     border: 1px solid #c0c0c0;
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em; }
-  #huffpostcode-march-madness legend {
+  #huffpostcode-march-madness.dont.touch.my.styles legend {
     border: 0;
     /* 1 */
     padding: 0;
     /* 2 */ }
-  #huffpostcode-march-madness textarea {
+  #huffpostcode-march-madness.dont.touch.my.styles textarea {
     overflow: auto; }
-  #huffpostcode-march-madness optgroup {
+  #huffpostcode-march-madness.dont.touch.my.styles optgroup {
     font-weight: bold; }
-  #huffpostcode-march-madness table {
+  #huffpostcode-march-madness.dont.touch.my.styles table {
     border-collapse: collapse;
     border-spacing: 0; }
-  #huffpostcode-march-madness td, #huffpostcode-march-madness th {
+  #huffpostcode-march-madness.dont.touch.my.styles td, #huffpostcode-march-madness.dont.touch.my.styles th {
     padding: 0; }
-  #huffpostcode-march-madness {
+  #huffpostcode-march-madness.dont.touch.my.styles {
     font-family: 'Roboto', sans-serif;
     font-size: 62.5%;
     color: #333333; }
-  #huffpostcode-march-madness header {
+  #huffpostcode-march-madness.dont.touch.my.styles header {
     background-color: #e5e5e5;
     border-bottom: 1px solid #4c4c4c;
     padding: 10px;
     *zoom: 1; }
-    #huffpostcode-march-madness header:before, #huffpostcode-march-madness header:after {
+    #huffpostcode-march-madness.dont.touch.my.styles header:before, #huffpostcode-march-madness.dont.touch.my.styles header:after {
       content: " ";
       display: table; }
-    #huffpostcode-march-madness header:after {
+    #huffpostcode-march-madness.dont.touch.my.styles header:after {
       clear: both; }
-    #huffpostcode-march-madness header .title-wrapper {
+    #huffpostcode-march-madness.dont.touch.my.styles header .title-wrapper {
       position: relative;
       width: 40%;
       padding-bottom: 10%;
       float: left; }
-    #huffpostcode-march-madness header .title {
+    #huffpostcode-march-madness.dont.touch.my.styles header .title {
       position: absolute;
       top: 50%;
       -webkit-transform: translate(0, -50%);
@@ -375,16 +383,16 @@ body {
       font-size: 1.5em;
       text-transform: uppercase;
       margin: 0; }
-    #huffpostcode-march-madness header .social {
+    #huffpostcode-march-madness.dont.touch.my.styles header .social {
       float: right;
       width: 30%; }
-    #huffpostcode-march-madness header .fb-wrapper, #huffpostcode-march-madness header .twit-wrapper {
+    #huffpostcode-march-madness.dont.touch.my.styles header .fb-wrapper, #huffpostcode-march-madness.dont.touch.my.styles header .twit-wrapper {
       float: right; }
-    #huffpostcode-march-madness header .fb-wrapper, #huffpostcode-march-madness header .twit-wrapper {
+    #huffpostcode-march-madness.dont.touch.my.styles header .fb-wrapper, #huffpostcode-march-madness.dont.touch.my.styles header .twit-wrapper {
       position: relative;
       width: 40%;
       padding-bottom: 40%; }
-    #huffpostcode-march-madness header .facebook, #huffpostcode-march-madness header .twitter {
+    #huffpostcode-march-madness.dont.touch.my.styles header .facebook, #huffpostcode-march-madness.dont.touch.my.styles header .twitter {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -396,14 +404,14 @@ body {
       background-position: center center;
       background-size: cover;
       cursor: pointer; }
-    #huffpostcode-march-madness header .facebook {
-      background-image: url('/images/twitter.svg'); }
-    #huffpostcode-march-madness header .twitter {
+    #huffpostcode-march-madness.dont.touch.my.styles header .facebook {
       background-image: url('/images/facebook.svg'); }
+    #huffpostcode-march-madness.dont.touch.my.styles header .twitter {
+      background-image: url('/images/twitter.svg'); }
   @media all and (min-width: 900px) {
-    #huffpostcode-march-madness header .title {
+    #huffpostcode-march-madness.dont.touch.my.styles header .title {
       font-size: 3em; } }
-  #huffpostcode-march-madness header .map-wrapper {
+  #huffpostcode-march-madness.dont.touch.my.styles header .map-wrapper {
     display: none;
     position: relative;
     float: right;
@@ -411,9 +419,9 @@ body {
     height: 80px;
     margin-top: -5px;
     cursor: pointer; }
-  #huffpostcode-march-madness header .map-wrapper.midwest, #huffpostcode-march-madness header .map-wrapper.south, #huffpostcode-march-madness header .map-wrapper.west, #huffpostcode-march-madness header .map-wrapper.east, #huffpostcode-march-madness header .map-wrapper.finals {
+  #huffpostcode-march-madness.dont.touch.my.styles header .map-wrapper.midwest, #huffpostcode-march-madness.dont.touch.my.styles header .map-wrapper.south, #huffpostcode-march-madness.dont.touch.my.styles header .map-wrapper.west, #huffpostcode-march-madness.dont.touch.my.styles header .map-wrapper.east, #huffpostcode-march-madness.dont.touch.my.styles header .map-wrapper.finals {
     display: block; }
-  #huffpostcode-march-madness header .map {
+  #huffpostcode-march-madness.dont.touch.my.styles header .map {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -422,56 +430,56 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover; }
-  #huffpostcode-march-madness header .midwest .map {
+  #huffpostcode-march-madness.dont.touch.my.styles header .midwest .map {
     background-image: url('/images/map/midwest.svg'); }
-  #huffpostcode-march-madness header .south .map {
+  #huffpostcode-march-madness.dont.touch.my.styles header .south .map {
     background-image: url('/images/map/south.svg'); }
-  #huffpostcode-march-madness header .west .map {
+  #huffpostcode-march-madness.dont.touch.my.styles header .west .map {
     background-image: url('/images/map/west.svg'); }
-  #huffpostcode-march-madness header .east .map {
+  #huffpostcode-march-madness.dont.touch.my.styles header .east .map {
     background-image: url('/images/map/east.svg'); }
-  #huffpostcode-march-madness header .finals .map {
+  #huffpostcode-march-madness.dont.touch.my.styles header .finals .map {
     background-image: url('/images/map/finals.svg'); }
   @media all and (min-width: 900px) {
-    #huffpostcode-march-madness header .map {
+    #huffpostcode-march-madness.dont.touch.my.styles header .map {
       display: none; } }
-  #huffpostcode-march-madness .landing {
+  #huffpostcode-march-madness.dont.touch.my.styles .landing {
     display: none; }
-  #huffpostcode-march-madness .landing.active {
+  #huffpostcode-march-madness.dont.touch.my.styles .landing.active {
     display: block; }
   @media all and (min-width: 900px) {
-    #huffpostcode-march-madness .landing, #huffpostcode-march-madness .landing.active {
+    #huffpostcode-march-madness.dont.touch.my.styles .landing, #huffpostcode-march-madness.dont.touch.my.styles .landing.active {
       display: none; } }
-  #huffpostcode-march-madness .landing .top, #huffpostcode-march-madness .landing .bottom {
+  #huffpostcode-march-madness.dont.touch.my.styles .landing .top, #huffpostcode-march-madness.dont.touch.my.styles .landing .bottom {
     width: 100%; }
-  #huffpostcode-march-madness .landing .region {
+  #huffpostcode-march-madness.dont.touch.my.styles .landing .region {
     position: relative;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     text-align: center;
     cursor: pointer; }
-    #huffpostcode-march-madness .landing .region:hover span {
+    #huffpostcode-march-madness.dont.touch.my.styles .landing .region:hover span {
       font-size: 2.6em; }
-  #huffpostcode-march-madness .landing .midwest, #huffpostcode-march-madness .landing .south, #huffpostcode-march-madness .landing .west, #huffpostcode-march-madness .landing .east {
+  #huffpostcode-march-madness.dont.touch.my.styles .landing .midwest, #huffpostcode-march-madness.dont.touch.my.styles .landing .south, #huffpostcode-march-madness.dont.touch.my.styles .landing .west, #huffpostcode-march-madness.dont.touch.my.styles .landing .east {
     display: inline-block;
     width: 49%;
     padding-bottom: 60%; }
-  #huffpostcode-march-madness .landing .finals {
+  #huffpostcode-march-madness.dont.touch.my.styles .landing .finals {
     width: 75%;
     margin: 0 auto;
     padding-bottom: 10%; }
-  #huffpostcode-march-madness .landing .midwest {
+  #huffpostcode-march-madness.dont.touch.my.styles .landing .midwest {
     background-image: url('/images/smallBrackets/left.svg'); }
-  #huffpostcode-march-madness .landing .south {
+  #huffpostcode-march-madness.dont.touch.my.styles .landing .south {
     background-image: url('/images/smallBrackets/right.svg'); }
-  #huffpostcode-march-madness .landing .west {
+  #huffpostcode-march-madness.dont.touch.my.styles .landing .west {
     background-image: url('/images/smallBrackets/left.svg'); }
-  #huffpostcode-march-madness .landing .east {
+  #huffpostcode-march-madness.dont.touch.my.styles .landing .east {
     background-image: url('/images/smallBrackets/right.svg'); }
-  #huffpostcode-march-madness .landing .finals {
+  #huffpostcode-march-madness.dont.touch.my.styles .landing .finals {
     background-image: url('/images/smallBrackets/finals.svg'); }
-  #huffpostcode-march-madness .landing span {
+  #huffpostcode-march-madness.dont.touch.my.styles .landing span {
     font-family: 'Roboto Slab', sans-serif;
     text-transform: uppercase;
     font-size: 2em;
@@ -486,7 +494,7 @@ body {
     -webkit-transition: font-size, 0.2s ease;
     -moz-transition: font-size, 0.2s ease;
     transition: font-size, 0.2s ease; }
-  #huffpostcode-march-madness .popup {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup {
     display: none;
     position: absolute;
     z-index: 99;
@@ -503,26 +511,26 @@ body {
     background: white;
     padding-top: 28px;
     border: 2px solid #333333; }
-  #huffpostcode-march-madness .popup.active {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup.active {
     display: block; }
-  #huffpostcode-march-madness .popup.tall {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup.tall {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
-  #huffpostcode-march-madness .popup .close {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .close {
     position: absolute;
     top: 1px;
     right: 0;
     font-size: 1.3em;
     cursor: pointer; }
-    #huffpostcode-march-madness .popup .close:hover .icon-close {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .close:hover .icon-close {
       color: #333333; }
-    #huffpostcode-march-madness .popup .close:hover .icon-stop {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .close:hover .icon-stop {
       color: white; }
-    #huffpostcode-march-madness .popup .close .icon-close {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .close .icon-close {
       color: white;
       z-index: 9;
       position: absolute;
@@ -536,26 +544,26 @@ body {
       -webkit-transition: color 0.2s ease;
       -moz-transition: color 0.2s ease;
       transition: color 0.2s ease; }
-    #huffpostcode-march-madness .popup .close .icon-stop {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .close .icon-stop {
       color: #b2b2b2;
       font-size: 2em;
       background-color: white;
       -webkit-transition: color 0.2s ease;
       -moz-transition: color 0.2s ease;
       transition: color 0.2s ease; }
-  #huffpostcode-march-madness .popup .header {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .hpc-header {
     overflow: auto;
     margin-bottom: 10px; }
-  #huffpostcode-march-madness .popup .team1, #huffpostcode-march-madness .popup .team2 {
-    width: 50%;
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .team1, #huffpostcode-march-madness.dont.touch.my.styles .popup .team2 {
+    width: 148px;
     float: left;
     clear: right;
     border-bottom: 1px solid #b2b2b2; }
-    #huffpostcode-march-madness .popup .team1 .topLock, #huffpostcode-march-madness .popup .team2 .topLock {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .team1 .topLock, #huffpostcode-march-madness.dont.touch.my.styles .popup .team2 .topLock {
       height: 3em;
       position: relative; }
-    #huffpostcode-march-madness .popup .team1 .name, #huffpostcode-march-madness .popup .team1 .seed, #huffpostcode-march-madness .popup .team2 .name, #huffpostcode-march-madness .popup .team2 .seed {
-      color: #4c4c4c;
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .team1 .name, #huffpostcode-march-madness.dont.touch.my.styles .popup .team1 .seed, #huffpostcode-march-madness.dont.touch.my.styles .popup .team2 .name, #huffpostcode-march-madness.dont.touch.my.styles .popup .team2 .seed {
+      color: #b2b2b2;
       position: absolute;
       top: 50%;
       -webkit-transform: translate(0, -50%);
@@ -563,82 +571,90 @@ body {
       -ms-transform: translate(0, -50%);
       -o-transform: translate(0, -50%);
       transform: translate(0, -50%); }
-    #huffpostcode-march-madness .popup .team1 .seed, #huffpostcode-march-madness .popup .team2 .seed {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .team1 .seed, #huffpostcode-march-madness.dont.touch.my.styles .popup .team2 .seed {
       font-size: 1.5em; }
-    #huffpostcode-march-madness .popup .team1 .name, #huffpostcode-march-madness .popup .team2 .name {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .team1 .name, #huffpostcode-march-madness.dont.touch.my.styles .popup .team2 .name {
       margin: 0;
       font-size: 2em;
       padding: 0.2em;
       text-transform: uppercase; }
-    #huffpostcode-march-madness .popup .team1 .score, #huffpostcode-march-madness .popup .team2 .score {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .team1 .score, #huffpostcode-march-madness.dont.touch.my.styles .popup .team2 .score {
+      color: #b2b2b2;
       clear: both;
       margin: 0;
       font-family: 'Roboto Slab', sans-serif;
       font-size: 3.5em;
       padding: 0.1em 0.2em;
       border-top: 1px solid #b2b2b2; }
-  #huffpostcode-march-madness .popup .team1 {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .team1.winner .seed, #huffpostcode-march-madness.dont.touch.my.styles .popup .team2.winner .seed {
+    color: #4c4c4c; }
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .team1.winner .name, #huffpostcode-march-madness.dont.touch.my.styles .popup .team2.winner .name {
+    color: #4c4c4c; }
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .team1.winner .score, #huffpostcode-march-madness.dont.touch.my.styles .popup .team2.winner .score {
+    color: #4c4c4c; }
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .team1 {
     border-right: 1px solid #b2b2b2; }
-    #huffpostcode-march-madness .popup .team1 .seed {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .team1 .seed {
       left: 0; }
-    #huffpostcode-march-madness .popup .team1 .name {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .team1 .name {
       right: 0; }
-    #huffpostcode-march-madness .popup .team1 .score {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .team1 .score {
       text-align: right;
       border-left: 1px solid #b2b2b2; }
-  #huffpostcode-march-madness .popup .team2 {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .team2 {
     border-left: 1px solid #b2b2b2; }
-    #huffpostcode-march-madness .popup .team2 .seed {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .team2 .seed {
       right: 0; }
-    #huffpostcode-march-madness .popup .team2 .score {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .team2 .score {
       border-right: 1px solid #b2b2b2; }
-  #huffpostcode-march-madness .popup .chart text {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .chart text {
     font-family: 'Roboto Slab', sans-serif;
     font-size: 10pt;
     text-anchor: middle;
     fill: #b2b2b2; }
-  #huffpostcode-march-madness .popup .chart .axis {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .chart .axis {
     stroke-width: 2;
     stroke: #b2b2b2; }
-  #huffpostcode-march-madness .popup .chart .xAxisText {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .chart .xAxisText {
     fill: #b2b2b2; }
-  #huffpostcode-march-madness .popup .chart .team1 .scoreLine, #huffpostcode-march-madness .popup .chart .team2 .scoreLine {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .chart .team1 .scoreLine, #huffpostcode-march-madness.dont.touch.my.styles .popup .chart .team2 .scoreLine {
     stroke: #b2b2b2;
     stroke-width: 2;
     fill: none; }
-  #huffpostcode-march-madness .popup .chart .team1 .scoreCircle, #huffpostcode-march-madness .popup .chart .team2 .scoreCircle {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .chart .team1 .scoreCircle, #huffpostcode-march-madness.dont.touch.my.styles .popup .chart .team2 .scoreCircle {
     stroke: #b2b2b2;
     stroke-width: 2;
     fill: white; }
-  #huffpostcode-march-madness .popup .chart .team1 text, #huffpostcode-march-madness .popup .chart .team2 text {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .chart .team1 text, #huffpostcode-march-madness.dont.touch.my.styles .popup .chart .team2 text {
     alignment-baseline: middle; }
-  #huffpostcode-march-madness .popup .chart .winner .scoreLine {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .chart .winner .scoreLine {
     stroke: #333333; }
-  #huffpostcode-march-madness .popup .chart .winner .scoreCircle {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .chart .winner .scoreCircle {
     stroke: #333333; }
-  #huffpostcode-march-madness .popup .chart .winner text {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .chart .winner text {
     fill: #333333; }
-  #huffpostcode-march-madness .popup .title {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .title {
     font-family: 'Roboto Slab', sans-serif;
     text-transform: uppercase;
     margin: 0;
     font-size: 1.5em;
     font-weight: 700; }
-  #huffpostcode-march-madness .popup .text {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .text {
     margin: 0;
-    font-size: 1.2em; }
-  #huffpostcode-march-madness .popup .notable {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif; }
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .notable {
     overflow: auto;
     margin: 10px; }
-  #huffpostcode-march-madness .popup .badgeText {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .badgeText {
     width: 58%;
     float: left; }
-  #huffpostcode-march-madness .popup .badge-wrapper {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .badge-wrapper {
     position: relative;
     width: 40%;
     padding-bottom: 40%;
     float: left; }
-  #huffpostcode-march-madness .popup .badge {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .badge {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -648,23 +664,23 @@ body {
     background-position: center center;
     background-size: cover;
     margin: 10px; }
-  #huffpostcode-march-madness .popup .badge.Blowout {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .badge.Blowout {
     background-image: url('/images/badges/Blowout.svg'); }
-  #huffpostcode-march-madness .popup .badge.BuzzerBeater {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .badge.BuzzerBeater {
     background-image: url('/images/badges/BuzzerBeater.svg'); }
-  #huffpostcode-march-madness .popup .badge.Cinderella {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .badge.Cinderella {
     background-image: url('/images/badges/Cinderella.svg'); }
-  #huffpostcode-march-madness .popup .badge.Injury {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .badge.Injury {
     background-image: url('/images/badges/Injury.svg'); }
-  #huffpostcode-march-madness .popup .badge.OnFire {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .badge.OnFire {
     background-image: url('/images/badges/OnFire.svg'); }
-  #huffpostcode-march-madness .popup .badge.Player {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .badge.Player {
     background-image: url('/images/badges/Player.svg'); }
-  #huffpostcode-march-madness .popup .badge.Stat {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .badge.Stat {
     background-image: url('/images/badges/Stat.svg'); }
-  #huffpostcode-march-madness .popup .badge.Trophy {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .badge.Trophy {
     background-image: url('/images/badges/Trophy.svg'); }
-  #huffpostcode-march-madness .popup .continue {
+  #huffpostcode-march-madness.dont.touch.my.styles .popup .continue {
     display: none;
     background-color: #e5e5e5;
     text-align: center;
@@ -673,13 +689,13 @@ body {
     -webkit-transition: background-color 0.2s ease;
     -moz-transition: background-color 0.2s ease;
     transition: background-color 0.2s ease; }
-    #huffpostcode-march-madness .popup .continue.active {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .continue.active {
       display: block; }
-    #huffpostcode-march-madness .popup .continue:hover {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .continue:hover {
       background-color: #4c4c4c; }
-      #huffpostcode-march-madness .popup .continue:hover .text {
+      #huffpostcode-march-madness.dont.touch.my.styles .popup .continue:hover .text {
         color: white; }
-    #huffpostcode-march-madness .popup .continue .text {
+    #huffpostcode-march-madness.dont.touch.my.styles .popup .continue .text {
       font-family: 'Roboto Slab', sans-serif;
       font-size: 1.3em;
       letter-spacing: 0.18em;
@@ -689,24 +705,24 @@ body {
       -webkit-transition: color 0.2s ease;
       -moz-transition: color 0.2s ease;
       transition: color 0.2s ease; }
-  #huffpostcode-march-madness #bracket {
+  #huffpostcode-march-madness.dont.touch.my.styles #bracket {
     max-width: 900px;
     margin: 0 auto;
     *zoom: 1; }
-    #huffpostcode-march-madness #bracket:before, #huffpostcode-march-madness #bracket:after {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket:before, #huffpostcode-march-madness.dont.touch.my.styles #bracket:after {
       content: " ";
       display: table; }
-    #huffpostcode-march-madness #bracket:after {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket:after {
       clear: both; }
-  #huffpostcode-march-madness #bracket .spinner-wrapper {
+  #huffpostcode-march-madness.dont.touch.my.styles #bracket .spinner-wrapper {
     height: 0;
     position: relative;
     -webkit-transition: background-color 0.3s ease;
     -moz-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease; }
-    #huffpostcode-march-madness #bracket .spinner-wrapper .spinner {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .spinner-wrapper .spinner {
       display: none; }
-  #huffpostcode-march-madness #bracket.loading .spinner-wrapper {
+  #huffpostcode-march-madness.dont.touch.my.styles #bracket.loading .spinner-wrapper {
     display: block;
     position: absolute;
     top: 0;
@@ -714,7 +730,7 @@ body {
     left: 0;
     right: 0;
     background-color: #e5e5e5; }
-    #huffpostcode-march-madness #bracket.loading .spinner-wrapper .spinner {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket.loading .spinner-wrapper .spinner {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -728,7 +744,7 @@ body {
       -webkit-animation: animRotate, 2s, infinite, linear;
       -moz-animation: animRotate, 2s, infinite, linear;
       animation: animRotate, 2s, infinite, linear; }
-  #huffpostcode-march-madness #bracket.dim .spinner-wrapper {
+  #huffpostcode-march-madness.dont.touch.my.styles #bracket.dim .spinner-wrapper {
     height: auto;
     display: block;
     position: absolute;
@@ -741,129 +757,130 @@ body {
     -webkit-transition: background-color 0.3s ease;
     -moz-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease; }
-    #huffpostcode-march-madness #bracket.dim .spinner-wrapper .spinner {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket.dim .spinner-wrapper .spinner {
       display: none; }
-  #huffpostcode-march-madness #bracket {
+  #huffpostcode-march-madness.dont.touch.my.styles #bracket {
     position: relative; }
-    #huffpostcode-march-madness #bracket .region {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .region {
       display: none;
       width: 320px;
       height: 480px;
       margin: 0 auto; }
-    #huffpostcode-march-madness #bracket .region.active {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .region.active {
       display: block; }
-    #huffpostcode-march-madness #bracket .round {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round {
       width: 100px; }
-      #huffpostcode-march-madness #bracket .round .title {
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .round .title {
         display: none; }
-    #huffpostcode-march-madness #bracket .south .round, #huffpostcode-march-madness #bracket .east .round {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .south .round, #huffpostcode-march-madness.dont.touch.my.styles #bracket .east .round {
       float: left;
       margin-right: 10px; }
-      #huffpostcode-march-madness #bracket .south .round.round4, #huffpostcode-march-madness #bracket .east .round.round4 {
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .south .round.round4, #huffpostcode-march-madness.dont.touch.my.styles #bracket .east .round.round4 {
         margin-left: -50px; }
-      #huffpostcode-march-madness #bracket .south .round.round5, #huffpostcode-march-madness #bracket .east .round.round5 {
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .south .round.round5, #huffpostcode-march-madness.dont.touch.my.styles #bracket .east .round.round5 {
         margin-left: -70px; }
-    #huffpostcode-march-madness #bracket .west .round, #huffpostcode-march-madness #bracket .midwest .round {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .west .round, #huffpostcode-march-madness.dont.touch.my.styles #bracket .midwest .round {
       float: right;
       margin-left: 10px; }
-      #huffpostcode-march-madness #bracket .west .round.round2, #huffpostcode-march-madness #bracket .midwest .round.round2 {
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .west .round.round2, #huffpostcode-march-madness.dont.touch.my.styles #bracket .midwest .round.round2 {
         margin-right: 5px; }
-      #huffpostcode-march-madness #bracket .west .round.round4, #huffpostcode-march-madness #bracket .midwest .round.round4 {
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .west .round.round4, #huffpostcode-march-madness.dont.touch.my.styles #bracket .midwest .round.round4 {
         margin-right: -50px; }
-      #huffpostcode-march-madness #bracket .west .round.round5, #huffpostcode-march-madness #bracket .midwest .round.round5 {
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .west .round.round5, #huffpostcode-march-madness.dont.touch.my.styles #bracket .midwest .round.round5 {
         margin-right: -80px; }
-    #huffpostcode-march-madness #bracket .round2 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round2 {
       margin-top: 2%; }
-    #huffpostcode-march-madness #bracket .round2 .match {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round2 .match {
       margin-bottom: 8%; }
-    #huffpostcode-march-madness #bracket .round3 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round3 {
       margin-top: 10%; }
-    #huffpostcode-march-madness #bracket .round3 .match {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round3 .match {
       margin-bottom: 67%; }
-    #huffpostcode-march-madness #bracket .round4 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round4 {
       margin-top: 28%; }
-    #huffpostcode-march-madness #bracket .round4 .match {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round4 .match {
       margin-bottom: 184%; }
-    #huffpostcode-march-madness #bracket .round5 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round5 {
       margin-top: 64%; }
-    #huffpostcode-march-madness #bracket .round6, #huffpostcode-march-madness #bracket .round7 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round6, #huffpostcode-march-madness.dont.touch.my.styles #bracket .round7 {
       display: none; }
-    #huffpostcode-march-madness #bracket .finals .round2, #huffpostcode-march-madness #bracket .finals .round3, #huffpostcode-march-madness #bracket .finals .round4, #huffpostcode-march-madness #bracket .finals .round5 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round2, #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round3, #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round4, #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round5 {
       display: none; }
-    #huffpostcode-march-madness #bracket .finals .round6, #huffpostcode-march-madness #bracket .finals .round7 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6, #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round7 {
       display: block; }
-    #huffpostcode-march-madness #bracket .finals .round6 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6 {
       width: 100%;
       margin-top: 50px;
       *zoom: 1; }
-      #huffpostcode-march-madness #bracket .finals .round6:before, #huffpostcode-march-madness #bracket .finals .round6:after {
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6:before, #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6:after {
         content: " ";
         display: table; }
-      #huffpostcode-march-madness #bracket .finals .round6:after {
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6:after {
         clear: both; }
-      #huffpostcode-march-madness #bracket .finals .round6 .match:nth-child(1) {
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6 .match:nth-child(1) {
         float: left; }
-      #huffpostcode-march-madness #bracket .finals .round6 .match:nth-child(2) {
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6 .match:nth-child(2) {
         float: right; }
-    #huffpostcode-march-madness #bracket .finals .round7 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round7 {
       width: 100%; }
-      #huffpostcode-march-madness #bracket .finals .round7 .match {
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round7 .match {
         margin: 10px auto; }
   @media all and (min-width: 450px) {
-    #huffpostcode-march-madness #bracket .region {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .region {
       width: 450px; }
-      #huffpostcode-march-madness #bracket .region .title {
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .region .title {
         display: block;
         color: #b2b2b2;
         font-family: 'Roboto Slab', sans-serif;
         font-weight: 400;
-        margin: 0 5px; }
-    #huffpostcode-march-madness #bracket .finals .title {
+        margin: 0 5px;
+        font-size: 15px; }
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .title {
       text-align: center; }
-    #huffpostcode-march-madness #bracket .south .round.round2, #huffpostcode-march-madness #bracket .east .round.round2 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .south .round.round2, #huffpostcode-march-madness.dont.touch.my.styles #bracket .east .round.round2 {
       margin-left: 8px; }
-    #huffpostcode-march-madness #bracket .south .round.round4, #huffpostcode-march-madness #bracket .east .round.round4 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .south .round.round4, #huffpostcode-march-madness.dont.touch.my.styles #bracket .east .round.round4 {
       margin-left: 0; }
-    #huffpostcode-march-madness #bracket .south .round.round5, #huffpostcode-march-madness #bracket .east .round.round5 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .south .round.round5, #huffpostcode-march-madness.dont.touch.my.styles #bracket .east .round.round5 {
       margin-left: 0; }
-    #huffpostcode-march-madness #bracket .west .round.round2, #huffpostcode-march-madness #bracket .midwest .round.round2 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .west .round.round2, #huffpostcode-march-madness.dont.touch.my.styles #bracket .midwest .round.round2 {
       margin-right: 8px; }
-    #huffpostcode-march-madness #bracket .west .round.round4, #huffpostcode-march-madness #bracket .midwest .round.round4 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .west .round.round4, #huffpostcode-march-madness.dont.touch.my.styles #bracket .midwest .round.round4 {
       margin-right: 0; }
-    #huffpostcode-march-madness #bracket .west .round.round5, #huffpostcode-march-madness #bracket .midwest .round.round5 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .west .round.round5, #huffpostcode-march-madness.dont.touch.my.styles #bracket .midwest .round.round5 {
       margin-right: 0; }
-    #huffpostcode-march-madness #bracket .round2 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round2 {
       margin-top: 8px; }
-    #huffpostcode-march-madness #bracket .round2 .match {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round2 .match {
       margin-bottom: 8%; }
-    #huffpostcode-march-madness #bracket .round3 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round3 {
       margin-top: 40px; }
-    #huffpostcode-march-madness #bracket .round3 .match {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round3 .match {
       margin-bottom: 66px; }
-    #huffpostcode-march-madness #bracket .round4 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round4 {
       margin-top: 98px; }
-    #huffpostcode-march-madness #bracket .round4 .match {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round4 .match {
       margin-bottom: 184%; }
-    #huffpostcode-march-madness #bracket .round5 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round5 {
       margin-top: 210px; }
-    #huffpostcode-march-madness #bracket .round6, #huffpostcode-march-madness #bracket .round7 {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .round6, #huffpostcode-march-madness.dont.touch.my.styles #bracket .round7 {
       display: none; } }
   @media all and (min-width: 900px) {
-    #huffpostcode-march-madness #bracket .region {
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .region {
       float: left;
       display: block;
-      margin-bottom: 20px; }
-      #huffpostcode-march-madness #bracket .region.finals {
+      margin-bottom: 40px; }
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .region.finals {
         width: 320px; }
-      #huffpostcode-march-madness #bracket .region.west {
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .region.west {
         float: right; }
-      #huffpostcode-march-madness #bracket .region.midwest {
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .region.midwest {
         float: right; }
-      #huffpostcode-march-madness #bracket .region.finals {
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .region.finals {
         position: absolute;
         top: 408px;
         left: 290px; } }
-  #huffpostcode-march-madness .match {
+  #huffpostcode-march-madness.dont.touch.my.styles .match {
     width: 100px;
     height: 50px;
     background-color: #e5e5e5;
@@ -871,26 +888,29 @@ body {
     list-style-type: none;
     padding-left: 0;
     text-align: left;
-    font-size: 1.1em;
+    font-size: 10px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     transition: all 0.5s ease; }
-    #huffpostcode-march-madness .match.final {
+    #huffpostcode-march-madness.dont.touch.my.styles .match.final {
       border-top: 2px solid #b2b2b2; }
-      #huffpostcode-march-madness .match.final:hover {
+      #huffpostcode-march-madness.dont.touch.my.styles .match.final:hover {
         cursor: pointer;
         background-color: #333333;
         color: white; }
-        #huffpostcode-march-madness .match.final:hover .team.winner, #huffpostcode-march-madness .match.final:hover .team.loser {
+        #huffpostcode-march-madness.dont.touch.my.styles .match.final:hover .team.winner, #huffpostcode-march-madness.dont.touch.my.styles .match.final:hover .team.loser {
           color: white; }
-  #huffpostcode-march-madness .match .team {
+  #huffpostcode-march-madness.dont.touch.my.styles .match .team {
     width: 100px;
     height: 25px;
     padding: 3px; }
-    #huffpostcode-march-madness .match .team .score {
+    #huffpostcode-march-madness.dont.touch.my.styles .match .team .score {
       float: right; }
-  #huffpostcode-march-madness .match .team.winner {
+  #huffpostcode-march-madness.dont.touch.my.styles .match .team.winner {
     font-weight: 700;
     color: #333333; }
-  #huffpostcode-march-madness .match .team.loser {
+  #huffpostcode-march-madness.dont.touch.my.styles .match .team.loser {
     color: #b2b2b2; }
+  @media all and (min-width: 450px) {
+    #huffpostcode-march-madness.dont.touch.my.styles .match {
+      font-size: 12px; } }

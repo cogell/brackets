@@ -6,6 +6,9 @@
 		"Handlebars": false,
 		"Tabletop": false,
 		"Kinetic": false,
+		"Backbone": false,
+		"d3": false,
+		"FB": false,
 
 		"console": false,
 

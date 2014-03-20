@@ -41,6 +41,7 @@ require.config({
       deps: ['jquery']
     }
 
-  }
+  },
+  waitSeconds: 30
 
 });

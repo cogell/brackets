@@ -13,5 +13,5 @@ exports.task = function () {
         // },
         // ... more require.js options
     })
-  .pipe(gulp.dest('../dist/'));
+  .pipe(gulp.dest('../dist/scripts'));
 };

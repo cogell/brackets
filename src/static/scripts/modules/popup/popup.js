@@ -29,6 +29,14 @@ define(function (require) {
       if(this.windowHeight >= 650){
         this.$el.addClass('tall');
       }
+
+      // conditional for winning team
+      if(this.model.get('winner')=='team1'){
+        this.$el.find('.team1').addClass('winner');
+      } else {
+        this.$el.find('.team2').addClass('winner');
+      }
+
       this.renderChart();
       this.show();
     },
@@ -51,21 +59,17 @@ define(function (require) {
     // TEMP
     renderChart: function () {
       var t11 = this.model.get('team1-first-half-score');
-      var t12 = this.model.get('team1-second-half-score');
       var t13 = this.model.get('team1-total-score');
 
       var t21 = this.model.get('team2-first-half-score');
-      var t22 = this.model.get('team2-second-half-score');
       var t23 = this.model.get('team2-total-score');
 
       var team1 = [
         {score: t11},
-        {score: t12},
         {score: t13}
       ];
       var team2 = [
         {score: t21},
-        {score: t22},
         {score: t23}
       ];
 
@@ -85,7 +89,7 @@ define(function (require) {
         }
       });
 
-      var xAxisData = ['Start', '1st Half', '2nd Half', 'Total'];
+      var xAxisData = ['Start', '1st Half', 'Total'];
       var margin = 20;
       var xaxisMargin = 30;
       var aboveCricleMargin = 30;
@@ -102,7 +106,7 @@ define(function (require) {
                 .domain([0, team1.length])
                 // don't know why I need to make the range extra big to get the
                 // drawing to render correctly
-                .range([0, width + margin + margin]);
+                .range([0, width + margin*5]);
 
       // define our line function
       var line = d3.svg.line()
@@ -156,8 +160,16 @@ define(function (require) {
 
       //// CREATE G's FOR EACH TEAM
       // render winner last !!!
-      var team2Group = shiftGroup.append('g').attr('class', 'team2');
-      var team1Group = shiftGroup.append('g').attr('class', 'team1 winner');
+      var team2Group;
+      var team1Group;
+
+      if(this.model.get('winner') == 'team1'){
+        team2Group = shiftGroup.append('g').attr('class', 'team2');
+        team1Group = shiftGroup.append('g').attr('class', 'team1 winner');
+      } else {
+        team1Group = shiftGroup.append('g').attr('class', 'team1');
+        team2Group = shiftGroup.append('g').attr('class', 'team2 winner');
+      }
 
       //// TEAM 1 & TEAM 2 PATHS
       createTeamPaths( team1Group, team1 );
