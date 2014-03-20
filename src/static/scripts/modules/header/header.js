@@ -41,7 +41,6 @@ define(function (require) {
 		},
 
 		fbClicked: function () {
-			console.log('fbClicked fired');
       FB.ui({
         method: 'feed',
         name: 'NCAA 2014 Tournament',

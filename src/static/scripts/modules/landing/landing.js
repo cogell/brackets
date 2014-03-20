@@ -33,7 +33,6 @@ define(function (require) {
 		regionClicked: function (e) {
 			e.preventDefault();
 			var region = $(e.target).closest('.region').data('region');
-			console.log(region + ' region was clicked!');
 			this.pubsub.trigger('region:clicked', region);
 		},
 

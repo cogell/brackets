@@ -1,18 +1,19 @@
-// TEMP
-body{
-	margin: 0;
-}
-
 @import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import 'icons'; // includes @font-face
 @import 'animation'; // includes @keyframes
 
 #huffpostcode-march-madness.dont.touch.my.styles{
 	position: relative; // for the kids
+
+	// width: 100%;
 	max-width: 900px;
-	margin: 0 auto;
-	@include clearfix;
+	overflow: hidden;
+
 	font-size: 10px;
+	margin-left:-6px;
+	margin-right: -6px; // bust mobile margins on huffpost
+
+	@include clearfix;
 
 	/* apply a natural box layout model to all elements */
 	*, *:before, *:after {

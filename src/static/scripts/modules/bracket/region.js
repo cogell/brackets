@@ -9,9 +9,16 @@ define(function (require) {
 		initialize: function (options) {
 			BaseView.prototype.initialize.call(this);
 
-			this.render();
 			this.$el.addClass( options.class + ' region' || 'region');
+			this.regionTitle = ( options.class || '');
+			this.render();
 			this.listenTo(this.collection, 'add', this.renderCollection);
+		},
+
+		render:function () {
+			this.$el.html(this.template({
+				'region-title': this.regionTitle
+			}));
 		},
 
 

@@ -33,7 +33,7 @@ function copyIndexBuild(){
 
 exports.task = function(){
 	copyImgFiles();
-	copyRequireJS();
+	// copyRequireJS();
 	copyFonts();
 	copyIndexBuild();
 };

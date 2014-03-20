@@ -221,7 +221,6 @@ define(function (require) {
           .attr('dy', function (d) {
             var bump = -15;
             if(d.higher){
-              console.log('higher d', d);
               bump = 12;
             }
             return (-1 * y(d.score)) - bump;

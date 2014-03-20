@@ -48,5 +48,3 @@ requirejs(['requirejs-config'],function(){
 	});
 
 });
-
-console.log('Main.js has been fetched.');

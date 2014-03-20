@@ -143,7 +143,6 @@ define(function (require) {
 				// dataType: 'jsonp',
 				// jsonpCallback: 'content1234',
 				success: function (data) {
-					console.log('data', data);
 					_this.dataHandler(data);
 				},
 				error: function (err) {
@@ -155,8 +154,6 @@ define(function (require) {
 		dataHandler: function (data) {
 			var _this = this;
 			_.each(data, function ( sheet, key ) {
-				console.log('sheet, key', sheet, key);
-				// console.log('sheet ' + sheet.name.toString() + ' about to be added' );
 				_this[key.toString()] = _this.createMatchesArray( key, sheet.row, _this );
 			});
 		},
@@ -184,7 +181,6 @@ define(function (require) {
 
 					if(matchModel.get('region') == 'midwest'){
 						_this.midwestCollection.add(matchModel);
-						console.log('_this.midwestCollection.length', _this.midwestCollection.length);
 					}
 
 					if(matchModel.get('region') == 'south'){

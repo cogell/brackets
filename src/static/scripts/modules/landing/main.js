@@ -10,7 +10,6 @@ define(function (require) {
 			$root.append( this.view.el );
 		},
 		hideLanding: function () {
-			console.log('hidelanding called');
 			this.view.hide();
 		},
 		showLanding: function () {

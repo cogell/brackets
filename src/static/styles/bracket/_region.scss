@@ -3,17 +3,29 @@
 
 	.region {
 		display: none;
+		position: relative;
 
-		width: 320px;
+		width: 310px;
 		height: 480px;
 		margin: 0 auto;
+	}
+
+	.region-title {
+		display: none;
+		position: absolute;
+		text-transform: capitalize;
+		font-family: $slab;
+		font-size: 22px;
+		color: $x-light-grey;
+		margin: 0;
 	}
 
 	.region.active{ display: block; }
 
 	.round {
 		width: 100px;
-		.title { display: none; }
+		.round-date { display: none; }
+		.round-title { display: none; }
 	}
 
 	.south,
@@ -21,8 +33,8 @@
 		.round {
 			float: left;
 			margin-right: 10px;
-			&.round4{margin-left: -50px;}
-			&.round5{margin-left: -70px;}
+			&.round4{margin-left: -60px;}
+			&.round5{margin-left: -80px;}
 		}
 	}
 
@@ -31,11 +43,34 @@
 		.round {
 			float: right;
 			margin-left: 10px;
-			&.round2{margin-right: 5px;}
-			&.round4{margin-right: -50px;}
-			&.round5{margin-right: -80px;}
+			&.round2{margin-right: 12px;}
+			&.round4{margin-right: -60px;}
+			&.round5{margin-right: -84px;}
 		}
 	}
+
+	.south,
+	.east,
+	.west,
+	.midwest{
+		background-repeat: no-repeat;
+		background-size: auto 527px;
+	}
+
+	.south,
+	.east {
+		background-position: -39px -71px;
+	}
+
+	.west,
+	.midwest {
+		background-position: -1px -63px;
+	}
+
+	.south {background-image: url('/images/lines/south.svg')}
+	.east {background-image: url('/images/lines/east.svg')}
+	.west {background-image: url('/images/lines/west.svg')}
+	.midwest {background-image: url('/images/lines/midwest.svg')}
 
 
 	.round2 { margin-top: 2%; }
@@ -47,19 +82,22 @@
 	.round4 { margin-top: 28%; }
 	.round4 .match { margin-bottom: 184%; }
 
-	.round5 { margin-top: 64%; }
+	.round5 { margin-top: 206px; }
 
 	.round6, .round7 { display: none; }
 
 	.finals {
 		.round2, .round3, .round4, .round5 {display: none;}
-		.round6, .round7 { display: block; }
+		.round6, .round7 {display: block;}
 		.round6 {
 			width: 100%;
 			margin-top: 50px;
 			@include clearfix;
-			.match:nth-child(1){float: left;}
-			.match:nth-child(2){float: right;}
+			.match{float: left;}
+			.match:last-child{float: right;}
+
+			// .match:nth-child(1){float: left;}
+			// .match:nth-child(2){float: right;}
 		}
 		.round7 {
 			width: 100%;
@@ -85,20 +123,29 @@
 		.region {
 			width: 450px;
 
-			.title{
+			.region-title {
+				display: block;
+				top: 243px;
+			}
+
+			.round-title,
+			.round-date{
 				display: block;
 				color: $light-grey;
 				font-family: $slab;
 				font-weight: 400;
 				margin: 0 5px;
-				font-size: 15px;
+				font-size: 12px;
 			}
 		}
 
-		.finals .title { text-align: center; }
+		.finals .round-title,
+		.finals .round-date { text-align: center; }
 
 		.south,
 		.east {
+			background-position: 20px -28px;
+			.region-title {left: 254px;}
 			.round {
 				&.round2{margin-left: 8px;}
 				&.round4{margin-left: 0;}
@@ -108,6 +155,8 @@
 
 		.west,
 		.midwest {
+			background-position: 84px -29px;
+			.region-title {left: 130px;}
 			.round {
 				&.round2{margin-right: 8px;}
 				&.round4{margin-right: 0;}
@@ -115,6 +164,12 @@
 			}
 		}
 
+		.finals{
+			.region-title {
+				top: 32px;
+				left: 190px;
+			}
+		}
 
 		.round2 { margin-top: 8px; }
 		.round2 .match { margin-bottom: 8%; }
@@ -147,7 +202,13 @@
 		display: block;
 		margin-bottom: 40px;
 
-		&.finals { width: 320px;}
+		&.finals {
+			width: 320px;
+			.region-title{
+				top: 94px;
+				left: 128px;
+			}
+		}
 
 		&.west {float: right }
 	  &.midwest {float: right }

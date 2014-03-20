@@ -22,9 +22,6 @@ define(function (require) {
 			this.eastView = options.eastView;
 			this.finalsView = options.finalsView;
 
-			// console.log('this.$el', this.$el);
-			// console.log('this.$el.find("#midwest")', this.$el.find('#midwest'));
-
 			this.$el.find('#midwest').append(this.midwestView.el);
 			this.$el.find('#south').append(this.southView.el);
 			this.$el.find('#west').append(this.westView.el);

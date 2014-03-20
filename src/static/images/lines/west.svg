@@ -100,21 +100,15 @@
 <g id="Lines">
 	<g>
 		<polyline fill="none" stroke="#E6E7E8" stroke-width="0.5" stroke-miterlimit="10" points="51.778,174.796 23.227,174.796 
-			23.227,243.252 		"/>
+			23.227,243.252 23.227,293.982 23.227,374.588 51.78,374.588 		"/>
 		<g>
 			<polyline fill="none" stroke="#E6E7E8" stroke-width="0.5" stroke-miterlimit="10" points="137.128,124.838 108.574,124.838 
-				108.574,144.646 			"/>
-			<polyline fill="none" stroke="#E6E7E8" stroke-width="0.5" stroke-miterlimit="10" points="137.128,224.629 108.574,224.629 
-				108.574,194.811 			"/>
+				108.574,144.646 108.574,194.811 108.574,224.629 137.128,224.629 			"/>
 		</g>
 		<g>
 			<polyline fill="none" stroke="#E6E7E8" stroke-width="0.5" stroke-miterlimit="10" points="137.128,324.629 108.574,324.629 
-				108.574,354.572 			"/>
-			<polyline fill="none" stroke="#E6E7E8" stroke-width="0.5" stroke-miterlimit="10" points="137.128,424.422 108.574,424.422 
-				108.574,394.602 			"/>
+				108.574,354.572 108.574,394.602 108.574,424.422 137.128,424.422 			"/>
 		</g>
-		<polyline fill="none" stroke="#E6E7E8" stroke-width="0.5" stroke-miterlimit="10" points="51.78,374.588 23.227,374.588 
-			23.227,293.982 		"/>
 	</g>
 </g>
 <g id="Nav" display="none">
