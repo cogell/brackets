@@ -21,7 +21,7 @@ define(function (require) {
       this.$el.addClass('popup');
 
       // conditional for continue button
-      if(this.model.get('match-post-link').length >= 5){
+      if(this.model.get('match-post-link') && this.model.get('match-post-link').length >= 5){
         this.$el.find('.continue').addClass('active');
       }
 

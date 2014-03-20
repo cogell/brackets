@@ -10,7 +10,7 @@
 	overflow: hidden;
 
 	font-size: 10px;
-	margin-left:-6px;
+	margin-left: -6px;
 	margin-right: -6px; // bust mobile margins on huffpost
 
 	@include clearfix;
@@ -27,6 +27,10 @@
 	@import 'measurements';
 	@import 'breakpoints';
 	@import 'type';
+
+	@media all and (min-width: $full-width) {
+		margin: 0 auto;
+	}
 
 	@import 'header/header';
 	@import 'header/map';

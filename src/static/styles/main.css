@@ -354,6 +354,9 @@
     font-family: 'Roboto', sans-serif;
     font-size: 62.5%;
     color: #333333; }
+  @media all and (min-width: 900px) {
+    #huffpostcode-march-madness.dont.touch.my.styles {
+      margin: 0 auto; } }
   #huffpostcode-march-madness.dont.touch.my.styles header {
     background-color: #e5e5e5;
     border-bottom: 1px solid #4c4c4c;
@@ -384,7 +387,7 @@
       font-size: 1.5em;
       text-transform: uppercase;
       margin: 0; }
-    #huffpostcode-march-madness.dont.touch.my.styles header .social {
+    #huffpostcode-march-madness.dont.touch.my.styles header .hpc-social {
       float: right;
       width: 40%; }
     #huffpostcode-march-madness.dont.touch.my.styles header .back-wrapper, #huffpostcode-march-madness.dont.touch.my.styles header .fb-wrapper, #huffpostcode-march-madness.dont.touch.my.styles header .twit-wrapper {
@@ -596,7 +599,7 @@
       margin: 0;
       font-family: 'Roboto Slab', sans-serif;
       font-size: 3.5em;
-      padding: 0.1em 0.2em;
+      padding: 10px 10px;
       border-top: 1px solid #b2b2b2; }
   #huffpostcode-march-madness.dont.touch.my.styles .popup .team1.winner .seed, #huffpostcode-march-madness.dont.touch.my.styles .popup .team2.winner .seed {
     color: #4c4c4c; }
