@@ -40,7 +40,7 @@ define(function (require) {
 
 		twitClicked: function () {
 			var baseUrl = 'https://twitter.com/share?';
-			var url = '&url=' + encodeURIComponent(window.location.href);
+			var url = '&url=' + encodeURIComponent('http://www.huffingtonpost.com/2014/03/20/ncaa-tournament-bracket-2014-updating_n_5002005.html');
 			var text = '&text=' + encodeURIComponent('Get NCAA tournament scores and recaps with the @HuffPostSports interactive bracket.');
 			var hashtags = '&hashtags=' + 'NCAATournament,MarchMadness';
 			var twitterURL = baseUrl + url + text + hashtags;
@@ -52,7 +52,7 @@ define(function (require) {
         method: 'feed',
         name: 'NCAA 2014 Tournament',
         picture: 'http://labs-march-psychopathy.s3-website-us-west-2.amazonaws.com/images/social.png',
-        link: window.location.href,
+        link: 'http://www.huffingtonpost.com/2014/03/20/ncaa-tournament-bracket-2014-updating_n_5002005.html',
         description: 'Get NCAA tournament scores and recaps with the HuffPost Sports interactive bracket'
       },
       function(response) {
