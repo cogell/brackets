@@ -175,27 +175,19 @@ define(function (require) {
 
 		matchesToCollections: function () {
 			var _this = this;
-			// make sure you have all matches for proceeding
-			if(this.allMatches.length == 63){
+			// make sure you have all matches before proceeding
+			if(this.allMatches.length == 64){
 				_.each(this.allMatches, function (matchModel) {
 
 					if(matchModel.get('region') == 'midwest'){
 						_this.midwestCollection.add(matchModel);
-					}
-
-					if(matchModel.get('region') == 'south'){
+					} else if(matchModel.get('region') == 'south'){
 						_this.southCollection.add(matchModel);
-					}
-
-					if(matchModel.get('region') == 'west'){
+					} else if(matchModel.get('region') == 'west'){
 						_this.westCollection.add(matchModel);
-					}
-
-					if(matchModel.get('region') == 'east'){
+					} else if(matchModel.get('region') == 'east'){
 						_this.eastCollection.add(matchModel);
-					}
-
-					if(matchModel.get('region') == 'null'){
+					} else if(matchModel.get('region') == 'null'){
 						_this.finalsCollection.add(matchModel);
 					}
 
