@@ -869,27 +869,29 @@
       margin-top: 206px; }
     #huffpostcode-march-madness.dont.touch.my.styles #bracket .round6, #huffpostcode-march-madness.dont.touch.my.styles #bracket .round7 {
       display: none; }
-    #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round2, #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round3, #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round4, #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round5 {
-      display: none; }
-    #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6, #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round7 {
-      display: block; }
-    #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6 {
-      width: 100%;
-      margin-top: 50px;
-      *zoom: 1; }
-      #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6:before, #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6:after {
-        content: " ";
-        display: table; }
-      #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6:after {
-        clear: both; }
-      #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6 .match {
-        float: left; }
-      #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6 .match:last-child {
-        float: right; }
-    #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round7 {
-      width: 100%; }
-      #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round7 .match {
-        margin: 10px auto; }
+    #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals {
+      height: 200px; }
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round2, #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round3, #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round4, #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round5 {
+        display: none; }
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6, #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round7 {
+        display: block; }
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6 {
+        width: 100%;
+        margin-top: 50px;
+        *zoom: 1; }
+        #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6:before, #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6:after {
+          content: " ";
+          display: table; }
+        #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6:after {
+          clear: both; }
+        #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6 .match {
+          float: left; }
+        #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round6 .match:last-child {
+          float: right; }
+      #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round7 {
+        width: 100%; }
+        #huffpostcode-march-madness.dont.touch.my.styles #bracket .finals .round7 .match {
+          margin: 10px auto; }
   @media all and (min-width: 450px) {
     #huffpostcode-march-madness.dont.touch.my.styles #bracket .region {
       width: 450px; }
